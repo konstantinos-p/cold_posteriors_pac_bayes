@@ -1,0 +1,60 @@
+from torch.utils.data import Dataset, DataLoader
+from scripts.regression_datasets.regression_torch_datasets import DiamondsDataset,data_split
+'''
+Some testing scripts for the Diamonds torch dataset object
+'''
+
+def test_without_dataloader(csv_file):
+    '''
+    This test function iterates over a split of the Abalone dataset without using a
+    dataloader.
+    '''
+
+
+    abalone_dataset = DiamondsDataset(csv_file)
+
+    for i in range(len(abalone_dataset)):
+        X,y = abalone_dataset[i]
+
+        print('Features')
+        print(X)
+
+        print('Targetss')
+        print(y)
+
+        pause =1
+
+def test_with_dataloader(csv_file):
+    '''
+    This test function iterates over a split of the Abalone dataset by using a
+    dataloader.
+    '''
+
+    abalone_dataset = DiamondsDataset(csv_file)
+
+    dataloader = DataLoader(abalone_dataset, batch_size=40,
+                            shuffle=True)
+
+    for i_batch, (X,y) in enumerate(dataloader):
+
+        print('Features')
+        print(X)
+
+        print('Targets')
+        print(y)
+
+        pause =1
+
+
+
+
+
+#test_without_dataloader('dataset/data.csv')
+
+#test_with_dataloader('dataset/data.csv')
+
+test,train,train_suffix,validation,true,true_suffix = \
+    data_split(DiamondsDataset('dataset/data.csv'),test_size=10788,train_size=10788+5394,suffix_size = 0,validation_size=5394,seed_split=42)
+
+
+end =1

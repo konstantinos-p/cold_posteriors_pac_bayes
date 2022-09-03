@@ -1,0 +1,14 @@
+name: pytorch
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9.11
+  - pytorch=1.11.0
+  - pip:
+    - asdfghjkl==0.1a2
+    - backpack-for-pytorch==1.5.0
+    - einops==0.4.1
+    - laplace-torch==0.1a2
+prefix: /home/pkonstan/miniconda3/envs/pytorch
+
