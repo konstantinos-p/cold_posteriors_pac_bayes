@@ -1,5 +1,5 @@
 from torch import nn
-from scripts.classification_datasets.cifar10.cifar10_torch_dataset import get_dataloaders
+from scripts.classification_datasets.svhn.svhn_torch_dataset import get_dataloaders
 from utils.multiple_standard_data_experiments_utils import estimate_prior_and_posterior_plain
 import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper
@@ -8,7 +8,7 @@ import torch
 from utils.model_utils import resnet_cifar10style_scheduler
 
 '''
-This script trains multiple ResNet networks on the cifar10 dataset and saves them in new folders in the current directory.
+This script trains multiple ResNet networks on the svhn dataset and saves them in new folders in the current directory.
 '''
 
 number_of_networks = 10
@@ -21,13 +21,14 @@ weight_decay = 5e-4
 
 #Directory in which to save the models
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar10/results'
+       'classification_experiments/svhn/results'
 
-#Path to the cifar10 dataset
-dir_CIFAR10= '/services/scratch/mistis/kpitas/projects/cold-warm-posteriors/scripts/classification_datasets/cifar10/dataset'
+#Path to the svhn dataset
+dir_svhn= '/services/scratch/mistis/kpitas/projects/cold-warm-posteriors/scripts/classification_datasets/svhn/dataset'
 
 #Define dataloaders
-test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_CIFAR10,batch_size=batch_size,image_transforms=image_transforms)
+test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_svhn,batch_size=batch_size,
+                                                                         image_transforms=image_transforms)
 
 #Get and set device
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
