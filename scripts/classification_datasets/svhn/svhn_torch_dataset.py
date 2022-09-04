@@ -5,6 +5,7 @@ import torch
 from torch.nn.functional import one_hot
 import os
 from torch.utils.data import DataLoader
+from torchvision import transforms
 
 '''
 In this module I include all functions necessary to use the SVHN dataset.
@@ -33,7 +34,7 @@ def SVHN_split(dir='dataset',mode='classification',validation_percentage=10,seed
 
     default_transform = torchvision.transforms.Compose([
         torchvision.transforms.ToTensor(),
-        torchvision.transforms.Normalize((0.1307,), (0.3081,))
+        transforms.Lambda(lambda x: normalize_svhn(x))
         ])
 
     if image_transforms==False:
@@ -41,7 +42,7 @@ def SVHN_split(dir='dataset',mode='classification',validation_percentage=10,seed
     else:
         image_transform = torchvision.transforms.Compose([
         torchvision.transforms.ToTensor(),
-        torchvision.transforms.Normalize((0.1307,), (0.3081,)),
+        transforms.Lambda(lambda x: normalize_svhn(x)),
         torchvision.transforms.RandomHorizontalFlip(),
         torchvision.transforms.Pad(2),
         torchvision.transforms.RandomCrop(28)])
@@ -89,3 +90,7 @@ def get_dataloaders(validation_percentage=10,seed_split=42,batch_size=100,dir=No
     validation_dataloader = DataLoader(validation, batch_size=batch_size,
                                        shuffle=True)
     return test_dataloader,train_dataloader,validation_dataloader
+
+def normalize_svhn(data_tensor):
+    '''re-scale image values to [-1, 1]'''
+    return (data_tensor / 255.) * 2. - 1.
