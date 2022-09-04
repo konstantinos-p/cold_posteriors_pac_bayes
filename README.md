@@ -8,7 +8,7 @@ We investigate the cold posterior effect through the lens of PAC-Bayes generaliz
     <img src="/plots_for_paper/theory/diamonds/diamonds_original.png" height="270"/>
 </p>
 <p align = "center">
-Fig.1 - $\mathcal{B}_{\mathrm{original}}$ as a function of the $\lambda$ parameter for different datasets. We plot the Empirical Risk, Moment and KL terms, as well as the $\mathcal{B}_{\mathrm{original}}$ bound values for different $\lambda$. We see that for increasing values of $\lambda$, the empirical risk decreases, while the Moment term increases. Interestingly the KL term (which is the KL divergence + a constant and divided by $n\lambda$) \textbf{also decreases} as we increase $\lambda$. As the KL term dominates the bound, the overall effect is that bound \boldsymbol{decreases} as $\lambda$ increases and is tightest for the largest value of $\lambda$.
+Fig.1 - $\mathcal{B}_{\mathrm{original}}$ as a function of the $\lambda$ parameter for different datasets. We plot the Empirical Risk, Moment and KL terms, as well as the $\mathcal{B}_{\mathrm{original}}$ bound values for different $\lambda$. We see that for increasing values of $\lambda$, the empirical risk decreases, while the Moment term increases. Interestingly the KL term (which is the KL divergence + a constant and divided by $n\lambda$) **also decreases** as we increase $\lambda$. As the KL term dominates the bound, the overall effect is that bound **decreases** as $\lambda$ increases and is tightest for the largest value of $\lambda$.
 </p>
 
 <h2> :memo: Citation </h2>
