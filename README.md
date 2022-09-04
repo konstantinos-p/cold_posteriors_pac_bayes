@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/plots_for_paper/theory/abalone/abalone_original.png" height="150"/>
+    <img src="/plots_for_paper/theory/abalone/abalone_original.png" height="300"/>
 </p>
 
 <h2 align="center">Cold Posteriors through PAC-Bayes.</h2>
