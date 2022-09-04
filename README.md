@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="/plots_for_paper/theory/abalone/abalone_original.png" height="150"/>
+</p>
+
 <h2 align="center">Cold Posteriors through PAC-Bayes.</h2>
 
 We investigate the cold posterior effect through the lens of PAC-Bayes generalization bounds. We argue that in the non-asymptotic setting, when the number of training samples is (relatively) small, discussions of the cold posterior effect should take into account that approximate Bayesian inference does not readily provide guarantees of performance on out-of-sample data. Instead, out-of-sample error is better described through a generalization bound. In this context, we explore the connections of the ELBO objective from variational inference and the PAC-Bayes objectives. We note that, while the ELBO and PAC-Bayes objectives are similar, the latter objectives naturally contain a temperature parameter $\lambda$ which is not restricted to be $\lambda=1$. For both regression and classification tasks, in the case of isotropic Laplace approximations to the posterior,  we show how this PAC-Bayesian interpretation of the temperature parameter captures the cold posterior effect.
