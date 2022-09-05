@@ -32,8 +32,13 @@ def SVHN_split(dir='dataset',mode='classification',validation_percentage=10,seed
     if 'svhn' not in os.listdir(dir):
         raise FileNotFoundError('The svhn folder doesn\'t exist in directory: '+dir )
 
+    mean = [0.4380, 0.4440, 0.4730]
+    std = [0.1751, 0.1771, 0.1744]
+
     default_transform = torchvision.transforms.Compose([
-        torchvision.transforms.ToTensor()
+        torchvision.transforms.ToTensor(),
+        transforms.Normalize(mean=mean,
+                             std=std)
         ])
 
     if image_transforms==False:
@@ -92,4 +97,4 @@ def get_dataloaders(validation_percentage=10,seed_split=42,batch_size=100,dir=No
 
 def normalize_svhn(data_tensor):
     '''re-scale image values to [-1, 1]'''
-    return (data_tensor / 255.) * 2. - 1.
+    return (data_tensor / 255.)

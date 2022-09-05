@@ -73,20 +73,39 @@ def CNN_nobatchnorm():
 
     return nn.Sequential(
 
-        nn.Conv2d(1, 6, kernel_size=3, stride=1, padding=0),
-        nn.ReLU(),
-        nn.MaxPool2d(kernel_size = 2, stride = 2),
-        nn.Conv2d(6, 16, kernel_size=3, stride=1, padding=0),
-        nn.ReLU(),
-        nn.MaxPool2d(kernel_size = 2, stride = 2),
-        nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=0),
+        nn.Conv2d(1, 32, kernel_size=3, stride=1, padding=0),
         nn.ReLU(),
         nn.MaxPool2d(kernel_size = 2, stride = 2),
         nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=0),
         nn.ReLU(),
         nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
         nn.Flatten(),
-        nn.Linear(256, 120),
+        nn.Linear(1152, 120),
+        nn.ReLU(),
+        nn.Linear(120, 84),
+        nn.ReLU(),
+        nn.Linear(84, 10)
+        )
+
+def CNN_nobatchnorm_svhn():
+    '''
+    A slightly larger CNN architecture than LeNet.
+    '''
+
+    return nn.Sequential(
+
+        nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.Flatten(),
+        nn.Linear(2048, 120),
         nn.ReLU(),
         nn.Linear(120, 84),
         nn.ReLU(),
