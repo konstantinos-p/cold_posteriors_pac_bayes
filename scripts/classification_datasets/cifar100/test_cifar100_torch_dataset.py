@@ -10,5 +10,6 @@ print('The sizes of the sets are: \nTest: {:n} \nTrain: {:n} \nValidation: {:n}'
                                                                                             len(validation)) )
 test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir='dataset')
 
+samples_test = next(iter(test_dataloader))
 
 end =1

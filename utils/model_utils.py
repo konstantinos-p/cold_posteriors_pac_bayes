@@ -66,7 +66,32 @@ def LeNet_nobatchnorm():
         nn.Linear(84, 10)
         )
 
+def CNN_nobatchnorm():
+    '''
+    A slightly larger CNN architecture than LeNet.
+    '''
 
+    return nn.Sequential(
+
+        nn.Conv2d(1, 6, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Conv2d(6, 16, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=0),
+        nn.ReLU(),
+        nn.MaxPool2d(kernel_size = 2, stride = 2),
+        nn.Flatten(),
+        nn.Linear(256, 120),
+        nn.ReLU(),
+        nn.Linear(120, 84),
+        nn.ReLU(),
+        nn.Linear(84, 10)
+        )
 
 def train_loop(dataloader, model, loss_fn, optimizer,prior_mean=None,gamma=1):
     '''
@@ -157,6 +182,25 @@ def resnet_cifar10style_scheduler(optimizer,max_epochs):
     '''
 
     lmbda = lambda epoch: 0.1 if epoch == int(max_epochs*0.5) or epoch == int(max_epochs*0.75) or epoch == int(max_epochs*0.87) else 1
+
+    return MultiplicativeLR(optimizer, lr_lambda=lmbda)
+
+def resnet_cifar100style_scheduler(optimizer,max_epochs):
+    '''
+    Returns a common scheduler for Resnets trained on cifar10. The learning rate is multiplied by 0.1 at the point of
+    50%,75% and approximately 87% of the epochs.
+
+    Parameters
+    ----------
+    optimizer: The torch optimizer used for training.
+    max_epochs: The number of epochs used for training.
+
+    Returns
+    -------
+    cifar10style_scheduler: the created scheduler.
+    '''
+
+    lmbda = lambda epoch: 0.2 if epoch == int(max_epochs*0.30) or epoch == int(max_epochs*0.60) or epoch == int(max_epochs*0.80) else 1
 
     return MultiplicativeLR(optimizer, lr_lambda=lmbda)
 

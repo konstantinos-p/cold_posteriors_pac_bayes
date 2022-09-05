@@ -33,8 +33,7 @@ def SVHN_split(dir='dataset',mode='classification',validation_percentage=10,seed
         raise FileNotFoundError('The svhn folder doesn\'t exist in directory: '+dir )
 
     default_transform = torchvision.transforms.Compose([
-        torchvision.transforms.ToTensor(),
-        transforms.Lambda(lambda x: normalize_svhn(x))
+        torchvision.transforms.ToTensor()
         ])
 
     if image_transforms==False:

@@ -11,7 +11,7 @@ from utils.model_utils import resnet_cifar10style_scheduler
 This script trains multiple ResNet networks on the svhn dataset and saves them in new folders in the current directory.
 '''
 
-number_of_networks = 10
+number_of_networks = 1
 loss_fn = nn.CrossEntropyLoss()
 learning_rate = 1e-1
 batch_size = 128
@@ -24,7 +24,7 @@ path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_e
        'classification_experiments/svhn/results'
 
 #Path to the svhn dataset
-dir_svhn= '/services/scratch/mistis/kpitas/projects/cold-warm-posteriors/scripts/classification_datasets/svhn/dataset'
+dir_svhn= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/svhn/dataset'
 
 #Define dataloaders
 test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_svhn,batch_size=batch_size,
@@ -38,7 +38,7 @@ for i in range(number_of_networks):
     print('Starting new model.')
     os.chdir(path)
     folder_name = 'model_' + str(i)
-    model = FixupWideResNet(22, 8, 10, dropRate=0.3)
+    model = FixupWideResNet(16, 4, 10, dropRate=0.3)
     model.to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9,weight_decay=weight_decay)
     scheduler = resnet_cifar10style_scheduler(optimizer=optimizer,max_epochs=epochs)
