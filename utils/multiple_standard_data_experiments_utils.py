@@ -331,7 +331,9 @@ def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_datal
         results_file.close()
 
         #Save readme file
-        path.exists(folder+'readme.txt')
-        with open('readme.txt', 'w') as f:
-            f.write('The results were obtained with the following hyperparameters \n a: {} \n b: {}'.format(a, b))
+        path.exists(folder+'hyperparameters.txt')
+        with open('hyperparameters.txt', 'w') as f:
+            f.write('The results were obtained with the following hyperparameters \n\n grid_lambda: {} \n min_temperature: {} \n max_temperature: {} \n grid_prior_variance: {} \n min_prior_variance: {} \n max_prior_variance: {} \n n_samples: {} \n hessian_structure: {} \n subset_of_weights: {}' .format(grid_lambda,
+                        min_temperature,max_temperature,grid_prior_variance,min_prior_variance,max_prior_variance,
+                        n_samples,hessian_structure,subset_of_weights))
 

@@ -5,8 +5,6 @@ import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper,NLLLoss_with_log_transform
 from utils.wide_resnet_utils import FixupWideResNet
 import torch
-from utils.model_utils import resnet_cifar10style_scheduler
-
 
 '''
 This script estimates the B_mixed,B_original bounds for the MNIST-10 dataset.
@@ -15,12 +13,15 @@ This script estimates the B_mixed,B_original bounds for the MNIST-10 dataset.
 #Hyperparameters
 loss_fn = nn.CrossEntropyLoss()
 nll_with_log_tranform = NLLLoss_with_log_transform()
-batch_size = 40
-prior_variance=torch.linspace(0.0001,0.1,1)
+batch_size = 128
+grid_lambda = 20
 min_temperature=0.1
 max_temperature=20
-grid_lambda = 20
-n_samples_test_set_la = 100
+grid_prior_variance = 20
+min_prior_variance=0.1
+max_prior_variance=20
+n_samples_metrics_la = 100
+hessian_structure = 'kron'
 image_transforms = False
 
 #Get dataset
@@ -42,7 +43,8 @@ model = FixupWideResNet(22, 4, 10, dropRate=0.3)
 model.to(device)
 estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_dataloader,model,likelihood='classification',
                            loss_functions_test=[nll_with_log_tranform,ECE_wrapper,zero_one_loss],
-                           loss_functions_test_names=['nll', 'ECE', 'zero_one'],grid_lambda=100,
-                           min_temperature=0.1,max_temperature=100,grid_prior_variance=None,min_prior_variance=0.0001,
-                           max_prior_variance=1,n_samples=100,hessian_structure='kron')
+                           loss_functions_test_names=['nll', 'ECE', 'zero_one'],grid_lambda=grid_lambda,
+                           min_temperature=min_temperature,max_temperature=max_temperature,grid_prior_variance=None,
+                           min_prior_variance=min_prior_variance,max_prior_variance=max_prior_variance,
+                           n_samples=n_samples_metrics_la,hessian_structure=hessian_structure)
 
