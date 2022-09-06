@@ -9,6 +9,7 @@ import numpy as np
 from utils.bound_evaluation_utils import bound_estimator
 from laplace.curvature import AsdlGGN
 from laplace_package_extensions.laplace_extension import Laplace
+from os import path
 
 '''
 This file contains scripts that help train multiple deep neural networks on the regression datasets.
@@ -235,10 +236,10 @@ def estimate_prior_and_posterior_plain(loss_fns,loss_fns_names,epochs,
 
     return
 
-def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likelihood,loss_functions_test,
+def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_dataloader,model,likelihood,loss_functions_test,
                         loss_functions_test_names,grid_lambda=100,min_temperature=0.1,max_temperature=100,
                         grid_prior_variance=None,min_prior_variance=0.0001,max_prior_variance=1,n_samples=100,
-                        hessian_structure='kron'):
+                        hessian_structure='kron',subset_of_weights='all'):
 
     """
     This script finds all models in a given folder estimates the different metrics for varying temperature levels
@@ -248,6 +249,8 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
     ----------
     prior_variance: torch.tensor
         The prior variances for which to estimate the bounds.
+    train_dataloader:    torch.Dataloader
+        The Dataloader of the train set.
     test_dataloader:    torch.Dataloader
         The Dataloader of the test set.
     validation_dataloader:   torch.Dataloader
@@ -258,7 +261,7 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
         The minimum value of parameter \lambda.
     max_temperature: float
         The maximum value of parameter \lambda.
-    grid_prior_variance: float
+    grid_prior_variance: float,None
         The number of samples between min_temperature and max_temperature for which the bounds are evaluated.
     min_prior_variance: float
         The minimum value of parameter \lambda.
@@ -274,6 +277,8 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
         The losses used for testing.
     loss_functions_test_names:  Python list of strings
         The names of the loss functions used for testing.
+    subset_of_weights: 'all'
+        Which weights to fit the Laplace approximation over.
     """
 
     timer = Timer(len(glob("*/")))
@@ -287,9 +292,9 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
 
         # Load posterior mean
         model.load_state_dict(torch.load(folder + 'posterior_mean.pt'))
-        la = Laplace(model.eval(), likelihood=likelihood, prior_precision=1, subset_of_weights='all',
+        la = Laplace(model.eval(), likelihood=likelihood, prior_precision=1, subset_of_weights=subset_of_weights,
                      hessian_structure=hessian_structure, backend=AsdlGGN)
-        la.fit(validation_dataloader)
+        la.fit(train_dataloader)
 
         if grid_prior_variance ==None:
             la.optimize_prior_precision()
@@ -297,6 +302,7 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
         else:
             prior_variances = torch.linspace(min_prior_variance, max_prior_variance, grid_prior_variance).to(next(model.parameters()).device)
 
+        results = []
         for prior_var, iter in zip(prior_variances, np.arange(len(prior_variances))):
 
             print('Variance #'+str(iter)+'/'+str(len(prior_variances)))
@@ -317,9 +323,15 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
                                     n_samples=n_samples)
             validation_metrics = risk_estimator.results
 
+            results.append({'test':test_metrics,'validation':validation_metrics,'prior_var':prior_var})
+
         # Save results
-        all_results = {test_metrics,validation_metrics}
         results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
-        pickle.dump(all_results, results_file)
+        pickle.dump(results, results_file)
         results_file.close()
+
+        #Save readme file
+        path.exists(folder+'readme.txt')
+        with open('readme.txt', 'w') as f:
+            f.write('The results were obtained with the following hyperparameters \n a: {} \n b: {}'.format(a, b))
 

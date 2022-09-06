@@ -1,6 +1,6 @@
 from torch import nn
 from scripts.classification_datasets.cifar10.cifar10_torch_dataset import get_dataloaders
-from utils.multiple_standard_data_experiments_utils import estimate_prior_and_posterior_plain
+from utils.multiple_standard_data_experiments_utils import estimate_all_metrics_plain
 import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper,NLLLoss_with_log_transform
 from utils.wide_resnet_utils import FixupWideResNet
@@ -40,10 +40,9 @@ os.chdir(path)
 #Set model and estimate bounds
 model = FixupWideResNet(22, 4, 10, dropRate=0.3)
 model.to(device)
-estimate_all_bounds(prior_variance=prior_variance,true_dataloader=true_dataloader,
-                    train_suffix_dataloader=train_suffix_dataloader,test_dataloader=test_dataloader,
-                        grid_lambda=grid_lambda,min_temperature=min_temperature,max_temperature=max_temperature,
-                    n_samples=n_samples_test_set_la,model=model,likelihood='classification',loss_fn_bound=[loss_fn],
-                    loss_functions_test=[nll_with_log_tranform,ECE_wrapper,zero_one_loss],
-                    loss_functions_test_names=['nll','ECE','zero_one'])
+estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_dataloader,model,likelihood='classification',
+                           loss_functions_test=[nll_with_log_tranform,ECE_wrapper,zero_one_loss],
+                           loss_functions_test_names=['nll', 'ECE', 'zero_one'],grid_lambda=100,
+                           min_temperature=0.1,max_temperature=100,grid_prior_variance=None,min_prior_variance=0.0001,
+                           max_prior_variance=1,n_samples=100,hessian_structure='kron')
 
