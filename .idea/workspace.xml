@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481d24e-fd88-4fe1-840c-09e0a307ac5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/test_results.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/train_cifar10.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/test_results.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/train_cifar100.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/fashionmnist/test_results.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/fashionmnist/train_fashionmnist.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/svhn/test_results.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/svhn/train_svhn.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" afterPath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +47,8 @@
       <file leaf-file-name="laplace_evaluation_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/laplace_evaluation_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="102" column="36" lean-forward="false" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="36" />
+            <state relative-caret-position="300">
+              <caret line="120" column="20" lean-forward="false" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -67,7 +57,7 @@
       <file leaf-file-name="bound_evaluation_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="-2280">
               <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="53" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -79,8 +69,8 @@
       <file leaf-file-name="multiple_standard_data_experiments_utils.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+            <state relative-caret-position="678">
+              <caret line="320" column="55" lean-forward="true" selection-start-line="320" selection-start-column="55" selection-end-line="320" selection-end-column="55" />
               <folding>
                 <element signature="e#0#71#0" expanded="true" />
               </folding>
@@ -1408,14 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/laplace_evaluation_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="102" column="36" lean-forward="false" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/estimate_bounds_MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1446,7 +1428,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="-2280">
           <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="53" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
@@ -1454,10 +1436,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/laplace_evaluation_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="120" column="20" lean-forward="false" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="297" column="0" lean-forward="true" selection-start-line="297" selection-start-column="0" selection-end-line="297" selection-end-column="0" />
+        <state relative-caret-position="678">
+          <caret line="320" column="55" lean-forward="true" selection-start-line="320" selection-start-column="55" selection-end-line="320" selection-end-column="55" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
           </folding>

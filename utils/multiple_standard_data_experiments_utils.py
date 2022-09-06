@@ -279,6 +279,9 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
     timer = Timer(len(glob("*/")))
     folders = glob("*/")
     folders.sort()
+
+    lambdas = torch.linspace(min_temperature, max_temperature, grid_lambda).to(next(model.parameters()).device)
+
     for folder in folders:
         timer.time()
 
@@ -290,13 +293,13 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
 
         if grid_prior_variance ==None:
             la.optimize_prior_precision()
-            prior_variance = torch.tensor(1/la.prior_precision)
+            prior_variances = torch.tensor(1/la.prior_precision)
         else:
-            prior_variance = torch.linspace(min_prior_variance, max_prior_variance, grid_prior_variance).to(next(model.parameters()).device)
+            prior_variances = torch.linspace(min_prior_variance, max_prior_variance, grid_prior_variance).to(next(model.parameters()).device)
 
-        for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
+        for prior_var, iter in zip(prior_variances, np.arange(len(prior_variances))):
 
-            print('Variance #'+str(iter)+'/'+str(len(prior_variance)))
+            print('Variance #'+str(iter)+'/'+str(len(prior_variances)))
             #bound_estimator_obj.prior_variance = prior_var.item()
             la.prior_precision = 1/prior_var.item()
 
@@ -305,15 +308,17 @@ def estimate_all_metrics_plain(test_dataloader,validation_dataloader,model,likel
             risk_estimator.estimate(loss_functions_test,loss_functions_test_names , mode='posterior',
                                     lambdas=lambdas,
                                     n_samples=n_samples)
+            test_metrics = risk_estimator.results
 
-            # Estimate test set risk
-            risk_estimator = metrics_different_temperatures(test_dataloader, la)
+            # Estimate validation set risk
+            risk_estimator = metrics_different_temperatures(validation_dataloader, la)
             risk_estimator.estimate(loss_functions_test, loss_functions_test_names, mode='posterior',
                                     lambdas=lambdas,
                                     n_samples=n_samples)
+            validation_metrics = risk_estimator.results
 
         # Save results
-        all_results = {**bound_estimator_obj.results, **risk_estimator.results}
+        all_results = {test_metrics,validation_metrics}
         results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
         pickle.dump(all_results, results_file)
         results_file.close()
