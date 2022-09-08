@@ -323,10 +323,10 @@ def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_datal
                                     n_samples=n_samples)
             validation_metrics = risk_estimator.results
 
-            results.append({'test':test_metrics,'validation':validation_metrics,'prior_var':prior_var})
+            results.append({'test':test_metrics,'validation':validation_metrics,'prior_var':prior_var.item()})
 
         # Save results
-        results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
+        results_file = open(folder + 'la_metrics.pkl', "wb")
         pickle.dump(results, results_file)
         results_file.close()
 

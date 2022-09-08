@@ -934,7 +934,7 @@ class KronLaplace(ParametricLaplace):
     def posterior_sample(self, n_samples=100):
         samples = torch.randn(n_samples, self.n_params, device=self._device)
         samples = self.posterior_precision.bmm(samples, exponent=-0.5)
-        return self.mean.reshape(1, self.n_params) + samples.reshape(n_samples, self.n_params)
+        return self.posterior_mean.reshape(1, self.n_params) + samples.reshape(n_samples, self.n_params)
 
 #    I might need to write this function at some point.
 #    def prior_sample(self, n_samples=100):

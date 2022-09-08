@@ -7,7 +7,7 @@ from utils.wide_resnet_utils import FixupWideResNet
 import torch
 
 '''
-This script estimates the B_mixed,B_original bounds for the MNIST-10 dataset.
+This script estimates the required metrics for the laplace approximation of the cifar10 dataset.
 '''
 
 #Hyperparameters
@@ -29,8 +29,9 @@ path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_e
        'classification_experiments/cifar10'
 dir_cifar10= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/cifar10/dataset'
 
-test_dataloader,train_dataloader,train_suffix_dataloader,validation_dataloader,true_dataloader,true_suffix_dataloader = \
-    get_dataloaders(dir=dir_cifar10,batch_size=batch_size,image_transforms=image_transforms)
+test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_cifar10,batch_size=batch_size,
+                                                                         image_transforms=image_transforms)
+
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
