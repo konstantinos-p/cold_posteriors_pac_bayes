@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
 
 """
-Plot the requires metrics for the test and validation sets of the cifar10 dataset.
+Plot the requires metrics for the test and validation sets of the fashionmnist dataset.
 """
 def scale01(x):
     return x/np.max(x)
@@ -13,12 +13,12 @@ def softmax(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar10/results/runs/run_0/'
+       'classification_experiments/fashionmnist/results/runs/run_0/'
 
 metric = 'zero_one'
 nlls = {}
 original_bounds= {}
-models = [0,4,6,7]
+models = [0,1,2,3,4,5,6]
 
 test = []
 val = []

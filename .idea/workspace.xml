@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481d24e-fd88-4fe1-840c-09e0a307ac5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_results.py" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_results.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py" afterPath="$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" afterPath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,10 +24,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cifar10_test-val.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cifar10_test-val.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
+            <state relative-caret-position="411">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fashionmnist_test-val.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fit_laplace_cifar100.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="svhn_test-val.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
               <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -96,9 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_original_bound.py" />
-        <option value="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_mixed_bound.py" />
-        <option value="$PROJECT_DIR$/scripts/classification_datasets/mnist/mnist_torch_dataset.py" />
         <option value="$PROJECT_DIR$/scripts/classification_datasets/mnist/test_mnist_torch_dataset.py" />
         <option value="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/preprocess_dataset.py" />
         <option value="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/test_torch_dataset.py" />
@@ -147,6 +176,9 @@
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" />
+        <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py" />
+        <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py" />
+        <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" />
       </list>
     </option>
   </component>
@@ -226,15 +258,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="plots_for_paper" />
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="experiments" />
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="large_classification_datasets" />
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar100" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,13 +336,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/runs/run_0" />
-      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/runs" />
-      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results" />
-      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/model_0" />
-      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/results" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/svhn" />
       <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/fashionmnist" />
@@ -274,25 +343,15 @@
       <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10" />
       <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/run_0" />
+      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/results" />
+      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/runs/run_0" />
+      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/runs/run_0" />
+      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/runs" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.cifar10_test-val">
-    <configuration default="false" name="train_svhn" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/train_svhn.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.svhn_test-val">
     <configuration default="false" name="test_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -327,23 +386,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="experiments_abalone_bounds" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots_for_paper/experiments" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/experiments/experiments_abalone_bounds.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="cifar10_test-val" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,6 +399,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="cold-warm-posteriors" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="svhn_test-val" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cold-warm-posteriors" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="fashionmnist_test-val" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cold-warm-posteriors" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -496,19 +572,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.train_svhn" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_results" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_results (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.experiments_abalone_bounds" />
-      <item index="4" class="java.lang.String" itemvalue="Python.cifar10_test-val" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test_results" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test_results (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.cifar10_test-val" />
+      <item index="3" class="java.lang.String" itemvalue="Python.svhn_test-val" />
+      <item index="4" class="java.lang.String" itemvalue="Python.fashionmnist_test-val" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.cifar10_test-val" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_results" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_results (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.experiments_abalone_bounds" />
-        <item index="4" class="java.lang.String" itemvalue="Python.train_svhn" />
+        <item index="0" class="java.lang.String" itemvalue="Python.svhn_test-val" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cifar10_test-val" />
+        <item index="2" class="java.lang.String" itemvalue="Python.fashionmnist_test-val" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test_results" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test_results (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -547,7 +623,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37757438" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -926,6 +1002,16 @@
           <line>105</line>
           <option name="timeStamp" value="571" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="575" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py</url>
+          <line>105</line>
+          <option name="timeStamp" value="576" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -937,26 +1023,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="575" />
+      <option name="time" value="577" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/fashionmnist_torch_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/wide_resnet_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/train_CIFAR10_2.py" />
     <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/test_la.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
@@ -1107,13 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/classification_datasets/svhn/svhn_torch_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/classification_datasets/cifar100/test_cifar100_torch_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1178,13 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/estimate_bounds_MNIST.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1290,16 +1347,8 @@
         <state relative-caret-position="136">
           <caret line="70" column="13" lean-forward="true" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="328" column="52" lean-forward="false" selection-start-line="328" selection-start-column="38" selection-end-line="328" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1307,17 +1356,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/estimate_bounds_MNIST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/classification_datasets/svhn/svhn_torch_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="70" column="32" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2717">
+          <caret line="328" column="52" lean-forward="false" selection-start-line="328" selection-start-column="38" selection-end-line="328" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
+        <state relative-caret-position="411">
           <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
