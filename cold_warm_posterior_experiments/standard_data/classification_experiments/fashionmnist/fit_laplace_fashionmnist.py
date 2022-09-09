@@ -1,19 +1,19 @@
 from torch import nn
-from scripts.classification_datasets.cifar100.cifar100_torch_dataset import get_dataloaders
+from scripts.classification_datasets.fashionmnist.fashionmnist_torch_dataset import get_dataloaders
 from utils.multiple_standard_data_experiments_utils import estimate_all_metrics_plain
 import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper,NLLLoss_with_log_transform
-from utils.wide_resnet_utils import FixupWideResNet
+from utils.model_utils import CNN_nobatchnorm
 import torch
 
 '''
-This script estimates the required metrics for the laplace approximation of the cifar100 dataset.
+This script estimates the required metrics for the laplace approximation of the fashionmnist dataset.
 '''
 
 #Hyperparameters
 loss_fn = nn.CrossEntropyLoss()
 nll_with_log_tranform = NLLLoss_with_log_transform()
-batch_size = 128
+batch_size = 40
 grid_lambda = 20
 min_temperature=0.1
 max_temperature=20
@@ -26,11 +26,11 @@ image_transforms = False
 
 #Get dataset
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar100'
+       'classification_experiments/fashionmnist'
 
-dir_cifar100= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/cifar100/dataset'
+dir_fashionmnist= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/fashionmnist/dataset'
 
-test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_cifar100,batch_size=batch_size,
+test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_fashionmnist,batch_size=batch_size,
                                                                          image_transforms=image_transforms)
 
 
@@ -41,7 +41,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 os.chdir(path)
 
 #Set model and estimate bounds
-model = FixupWideResNet(22, 4, 100, dropRate=0.3)
+model = CNN_nobatchnorm()
 model.to(device)
 estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_dataloader,model,likelihood='classification',
                            loss_functions_test=[nll_with_log_tranform,ECE_wrapper,zero_one_loss],

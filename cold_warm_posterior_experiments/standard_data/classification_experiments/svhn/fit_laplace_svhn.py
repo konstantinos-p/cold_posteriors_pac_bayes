@@ -1,5 +1,5 @@
 from torch import nn
-from scripts.classification_datasets.cifar100.cifar100_torch_dataset import get_dataloaders
+from scripts.classification_datasets.svhn.svhn_torch_dataset import get_dataloaders
 from utils.multiple_standard_data_experiments_utils import estimate_all_metrics_plain
 import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper,NLLLoss_with_log_transform
@@ -7,7 +7,7 @@ from utils.wide_resnet_utils import FixupWideResNet
 import torch
 
 '''
-This script estimates the required metrics for the laplace approximation of the cifar100 dataset.
+This script estimates the required metrics for the laplace approximation of the svhn dataset.
 '''
 
 #Hyperparameters
@@ -26,11 +26,11 @@ image_transforms = False
 
 #Get dataset
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar100'
+       'classification_experiments/svhn'
 
-dir_cifar100= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/cifar100/dataset'
+dir_svhn= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/svhn/dataset'
 
-test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_cifar100,batch_size=batch_size,
+test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_svhn,batch_size=batch_size,
                                                                          image_transforms=image_transforms)
 
 
@@ -41,7 +41,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 os.chdir(path)
 
 #Set model and estimate bounds
-model = FixupWideResNet(22, 4, 100, dropRate=0.3)
+model = FixupWideResNet(22, 4, 10, dropRate=0.4)
 model.to(device)
 estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_dataloader,model,likelihood='classification',
                            loss_functions_test=[nll_with_log_tranform,ECE_wrapper,zero_one_loss],

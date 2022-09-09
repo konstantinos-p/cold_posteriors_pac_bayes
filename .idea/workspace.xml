@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481d24e-fd88-4fe1-840c-09e0a307ac5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/fit_laplace_fashionmnist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/fit_laplace_svhn.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,47 +23,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cifar10_test-val.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py">
+      <file leaf-file-name="fit_laplace_cifar10.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fashionmnist_test-val.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fit_laplace_cifar100.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="29" column="112" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="112" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="svhn_test-val.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py">
+      <file leaf-file-name="fit_laplace_cifar100.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="30" column="106" lean-forward="false" selection-start-line="30" selection-start-column="106" selection-end-line="30" selection-end-column="106" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fit_laplace_fashionmnist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/fit_laplace_fashionmnist.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="30" column="114" lean-forward="false" selection-start-line="30" selection-start-column="114" selection-end-line="30" selection-end-column="114" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fit_laplace_svhn.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/fit_laplace_svhn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="30" column="98" lean-forward="false" selection-start-line="30" selection-start-column="98" selection-end-line="30" selection-end-column="98" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,8 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/classification_datasets/mnist/test_mnist_torch_dataset.py" />
-        <option value="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/preprocess_dataset.py" />
         <option value="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/test_torch_dataset.py" />
         <option value="$PROJECT_DIR$/utils/bound_evaluation_utils.py" />
         <option value="$PROJECT_DIR$/utils/laplace_evaluation_utils.py" />
@@ -179,6 +176,8 @@
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/fashionmnist_test-val.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/svhn_test-val.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" />
+        <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/fit_laplace_fashionmnist.py" />
+        <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/fit_laplace_svhn.py" />
       </list>
     </option>
   </component>
@@ -310,7 +309,85 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="svhn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fashionmnist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="cifar100" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1028,23 +1105,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/test_la.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="25" column="71" lean-forward="false" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#12#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laplace_package_extensions/laplace_extension.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_laplace_cifar100.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1352,13 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/estimate_bounds_MNIST.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1395,7 +1448,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/cifar10_test-val.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
+        <state relative-caret-position="1575">
           <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -1413,11 +1466,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="112" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="30" column="106" lean-forward="false" selection-start-line="30" selection-start-column="106" selection-end-line="30" selection-end-column="106" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/fit_laplace_fashionmnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="30" column="114" lean-forward="false" selection-start-line="30" selection-start-column="114" selection-end-line="30" selection-end-column="114" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/fit_laplace_svhn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="30" column="98" lean-forward="false" selection-start-line="30" selection-start-column="98" selection-end-line="30" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
