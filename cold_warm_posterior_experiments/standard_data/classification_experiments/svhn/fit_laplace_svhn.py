@@ -26,7 +26,7 @@ image_transforms = False
 
 #Get dataset
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/svhn'
+       'classification_experiments/svhn/results'
 
 dir_svhn= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/svhn/dataset'
 

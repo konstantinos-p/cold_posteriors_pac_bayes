@@ -26,7 +26,7 @@ image_transforms = False
 
 #Get dataset
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar100'
+       'classification_experiments/cifar100/results'
 
 dir_cifar100= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/cifar100/dataset'
 

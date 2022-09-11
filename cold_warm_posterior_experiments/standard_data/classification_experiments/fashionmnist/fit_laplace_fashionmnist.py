@@ -26,7 +26,7 @@ image_transforms = False
 
 #Get dataset
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/fashionmnist'
+       'classification_experiments/fashionmnist/results'
 
 dir_fashionmnist= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/fashionmnist/dataset'
 

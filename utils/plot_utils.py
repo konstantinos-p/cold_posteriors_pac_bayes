@@ -96,6 +96,64 @@ class CPU_Unpickler(pickle.Unpickler):
             return lambda b: torch.load(io.BytesIO(b), map_location='cpu')
         else: return super().find_class(module, name)
 
+def multiple_runs_concatenation(path,runs,models,metric):
+    '''
+    Concatenates the results of multiple runs.
+
+    Parameters
+    ----------
+    path: string
+        The path of the multiple runs.
+    runs: Python list
+        The names of the runs to concatenate. The list should contain strings of the form
+        run_0,run_1
+    models: Python list
+        A list of numbers of different models to use.
+    metric: {'zero_one','nll','ECE'}
+
+    Returns
+    -------
+    mul_run_results_test: torch.tensor
+        The concatenated test metric results from multiple runs and models.
+    mul_run_results_validation: torch.tensor
+        The concatenated validation metric results from multiple runs and models.
+    mul_run_lambdas: torch.tensor
+        The concatenated lambdas from multiple runs and models.
+    '''
+    mul_run_results_test = []
+    mul_run_results_validation = []
+    mul_run_lambdas = []
+
+    for run in runs:
+        test=[]
+        val=[]
+        for model in models:
+            results_file = open(path +run+ "/results_" + str(model) + ".pkl", "rb")
+            output = pickle.load(results_file)
+            test.append(np.reshape(np.array(output[0]['test'][metric][1]), (1, -1)))
+            val.append(np.reshape(np.array(output[0]['validation'][metric][1]), (1, -1)))
+
+        lambdas = np.reshape(np.array(output[0]['test'][metric][0]), (-1))
+
+        test = np.concatenate(test, axis=0)
+        val = np.concatenate(val, axis=0)
+
+        mul_run_results_test.append(test)
+        mul_run_results_validation.append(val)
+        mul_run_lambdas.append(lambdas)
+
+    mul_run_results_test = np.concatenate(mul_run_results_test, axis=1)
+    mul_run_results_validation = np.concatenate(mul_run_results_validation, axis=1)
+    mul_run_lambdas = np.concatenate(mul_run_lambdas)
+
+    sort_seq = np.argsort(mul_run_lambdas)
+    mul_run_lambdas = mul_run_lambdas[sort_seq]
+    mul_run_results_test = mul_run_results_test[:,sort_seq]
+    mul_run_results_validation = mul_run_results_validation[:,sort_seq]
+
+
+    return mul_run_results_test,mul_run_results_validation,mul_run_lambdas
+
 
 
 

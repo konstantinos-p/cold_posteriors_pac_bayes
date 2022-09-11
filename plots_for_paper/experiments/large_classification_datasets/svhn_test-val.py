@@ -13,22 +13,22 @@ def softmax(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/svhn/results/runs/run_0/'
+       'classification_experiments/svhn/results/runs/run_1/'
 
 metric = 'zero_one'
 nlls = {}
 original_bounds= {}
-models = [0,1,2,3,4]
+models = [0,1,2,3]
 
 test = []
 val = []
 
-for i in range(10):
-    for model in  models:
-        results_file = open(path+"/results_"+str(model)+".pkl", "rb")
-        output = pickle.load(results_file)
-        test.append(np.reshape(np.array(output[0]['test'][metric][1]),(1,-1)))
-        val.append(np.reshape(np.array(output[0]['validation'][metric][1]),(1,-1)))
+
+for model in  models:
+    results_file = open(path+"/results_"+str(model)+".pkl", "rb")
+    output = pickle.load(results_file)
+    test.append(np.reshape(np.array(output[0]['test'][metric][1]),(1,-1)))
+    val.append(np.reshape(np.array(output[0]['validation'][metric][1]),(1,-1)))
 
 
 lambdas = np.reshape(np.array(output[0]['test'][metric][0]),(-1))

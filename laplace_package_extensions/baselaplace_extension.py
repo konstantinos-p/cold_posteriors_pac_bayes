@@ -103,7 +103,7 @@ class BaseLaplace:
             return factor * self.loss - c
         else:
             # for classification Xent == log Cat
-            return factor * self.loss
+            return -1 * self.loss
 
     def __call__(self, x, pred_type, link_approx, n_samples):
         raise NotImplementedError

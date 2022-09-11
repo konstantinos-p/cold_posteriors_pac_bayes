@@ -26,7 +26,7 @@ image_transforms = False
 
 #Get dataset
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar10'
+       'classification_experiments/cifar10/results'
 dir_cifar10= '/Users/Kostas/PycharmProjects/cold-warm-posteriors/scripts/classification_datasets/cifar10/dataset'
 
 test_dataloader,train_dataloader,validation_dataloader = get_dataloaders(dir=dir_cifar10,batch_size=batch_size,

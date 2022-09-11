@@ -2,6 +2,7 @@ import pickle
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
+from utils.plot_utils import multiple_runs_concatenation
 
 """
 Plot the requires metrics for the test and validation sets of the cifar10 dataset.
@@ -13,27 +14,16 @@ def softmax(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar10/results/runs/run_0/'
+       'classification_experiments/cifar10/results/runs/'
 
 metric = 'zero_one'
 nlls = {}
 original_bounds= {}
 models = [0,4,6,7]
 
-test = []
-val = []
+runs = ['run_0','run_1']
 
-for i in range(10):
-    for model in  models:
-        results_file = open(path+"/results_"+str(model)+".pkl", "rb")
-        output = pickle.load(results_file)
-        test.append(np.reshape(np.array(output[0]['test'][metric][1]),(1,-1)))
-        val.append(np.reshape(np.array(output[0]['validation'][metric][1]),(1,-1)))
-
-
-lambdas = np.reshape(np.array(output[0]['test'][metric][0]),(-1))
-
-
+test,val,lambdas = multiple_runs_concatenation(path=path,runs=runs,models=models,metric=metric)
 
 #Preprocess
 axis= 0
@@ -42,8 +32,6 @@ nlls_stds = {}
 original_bounds_means = {}
 original_bounds_stds = {}
 
-test = np.concatenate(test,axis=axis)
-val = np.concatenate(val,axis=axis)
 
 test_means = np.mean(test,axis=0)
 val_means = np.mean(val,axis=0)
