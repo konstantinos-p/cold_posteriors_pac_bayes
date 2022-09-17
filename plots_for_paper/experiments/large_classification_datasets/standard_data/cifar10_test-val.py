@@ -2,9 +2,10 @@ import pickle
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
+from utils.plot_utils import multiple_runs_concatenation
 
 """
-Plot the requires metrics for the test and validation sets of the fashionmnist dataset.
+Plot the requires metrics for the test and validation sets of the cifar10 dataset.
 """
 def scale01(x):
     return x/np.max(x)
@@ -13,27 +14,16 @@ def softmax(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/fashionmnist/results/runs/run_2/'
+       'classification_experiments/cifar10/results/runs/'
 
-metric = 'zero_one'
+metric = 'nll'
 nlls = {}
 original_bounds= {}
-models = [0,1,2,3,4,5,6,7,8,9]
+models = [0,3,4,6,7]#[0,3,4,6,7]
 
-test = []
-val = []
+runs = ['run_2']
 
-
-for model in  models:
-    results_file = open(path+"/results_"+str(model)+".pkl", "rb")
-    output = pickle.load(results_file)
-    test.append(np.reshape(np.array(output[0]['test'][metric][1]),(1,-1)))
-    val.append(np.reshape(np.array(output[0]['validation'][metric][1]),(1,-1)))
-
-
-lambdas = np.reshape(np.array(output[0]['test'][metric][0]),(-1))
-
-
+test,val,lambdas = multiple_runs_concatenation(path=path,runs=runs,models=models,metric=metric)
 
 #Preprocess
 axis= 0
@@ -42,8 +32,6 @@ nlls_stds = {}
 original_bounds_means = {}
 original_bounds_stds = {}
 
-test = np.concatenate(test,axis=axis)
-val = np.concatenate(val,axis=axis)
 
 test_means = np.mean(test,axis=0)
 val_means = np.mean(val,axis=0)

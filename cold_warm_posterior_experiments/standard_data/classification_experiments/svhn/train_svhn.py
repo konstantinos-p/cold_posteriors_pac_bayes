@@ -5,7 +5,7 @@ import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper
 from utils.wide_resnet_utils import FixupWideResNet
 import torch
-from utils.model_utils import resnet_cifar10style_scheduler,CNN_nobatchnorm_svhn
+from utils.model_utils import resnet_cifar10style_scheduler
 
 '''
 This script trains multiple ResNet networks on the svhn dataset and saves them in new folders in the current directory.
@@ -38,7 +38,7 @@ for i in range(number_of_networks):
     print('Starting new model.')
     os.chdir(path)
     folder_name = 'model_' + str(i)
-    model = CNN_nobatchnorm_svhn()
+    model = FixupWideResNet(22, 4, 10, dropRate=0.4)
     model.to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9,weight_decay=weight_decay)
     scheduler = resnet_cifar10style_scheduler(optimizer=optimizer,max_epochs=epochs)

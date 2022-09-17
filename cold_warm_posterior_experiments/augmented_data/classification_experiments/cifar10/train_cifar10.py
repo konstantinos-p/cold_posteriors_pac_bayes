@@ -37,7 +37,7 @@ for i in range(number_of_networks):
     print('Starting new model.')
     os.chdir(path)
     folder_name = 'model_' + str(i)
-    model = FixupWideResNet(22, 8, 10, dropRate=0.3)
+    model = FixupWideResNet(22, 4, 10, dropRate=0.3)
     model.to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9,weight_decay=weight_decay)
     scheduler = resnet_cifar10style_scheduler(optimizer=optimizer,max_epochs=epochs)

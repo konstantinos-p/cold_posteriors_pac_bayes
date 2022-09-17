@@ -48,8 +48,8 @@ def SVHN_split(dir='dataset',mode='classification',validation_percentage=10,seed
         torchvision.transforms.ToTensor(),
         transforms.Lambda(lambda x: normalize_svhn(x)),
         torchvision.transforms.RandomHorizontalFlip(),
-        torchvision.transforms.Pad(2),
-        torchvision.transforms.RandomCrop(28)])
+        torchvision.transforms.Pad(4),
+        torchvision.transforms.RandomCrop(32)])
 
     if mode == 'classification':
         target_transform = None

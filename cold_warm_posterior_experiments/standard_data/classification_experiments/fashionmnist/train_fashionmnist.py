@@ -3,7 +3,7 @@ from scripts.classification_datasets.fashionmnist.fashionmnist_torch_dataset imp
 from utils.multiple_standard_data_experiments_utils import estimate_prior_and_posterior_plain
 import os
 from utils.laplace_evaluation_utils import zero_one_loss,ECE_wrapper
-from utils.model_utils import LeNet_nobatchnorm
+from utils.model_utils import CNN_nobatchnorm
 import torch
 
 '''
@@ -37,7 +37,7 @@ for i in range(number_of_networks):
     print('Starting new model.')
     os.chdir(path)
     folder_name = 'model_' + str(i)
-    model = LeNet_nobatchnorm()
+    model = CNN_nobatchnorm()
     model.to(device)
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=0.9)
     scheduler = None

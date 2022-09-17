@@ -13,13 +13,13 @@ def softmax(x):
     return np.maximum(x,0.01)
 
 
-path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
+path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/augmented_data/' \
        'classification_experiments/cifar10/results/runs/'
 
-metric = 'zero_one'
+metric = 'nll'
 nlls = {}
 original_bounds= {}
-models = [0,4,6,7]
+models = [0,2,4,5,6,7,9]#[0,3,4,6,7]
 
 runs = ['run_0','run_1']
 

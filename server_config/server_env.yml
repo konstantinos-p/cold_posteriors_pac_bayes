@@ -10,5 +10,6 @@ dependencies:
     - backpack-for-pytorch==1.5.0
     - einops==0.4.1
     - laplace-torch==0.1a2
+    - netcal==1.2.1
 prefix: /home/pkonstan/miniconda3/envs/pytorch
 
