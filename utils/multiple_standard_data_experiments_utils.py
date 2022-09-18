@@ -353,13 +353,13 @@ def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
         The Dataloader of the training set.
     test_dataloader:    torch.Dataloader
         The Dataloader of the test set.
-    grid_lambda: float
+    grid_lambda: int
         The number of samples between min_temperature and max_temperature for which the bounds are evaluated.
     min_temperature: float
         The minimum value of parameter \lambda.
     max_temperature: float
         The maximum value of parameter \lambda.
-    n_samples: float
+    n_samples: int
         The number of Monte Carlo samples when estimating the test risk.
     model:  torch.Sequential.model
         The deterministic model on which we will fit our LA and estimate bounds.
@@ -386,7 +386,7 @@ def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
 
         for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
             print('Variance #'+str(iter)+'/'+str(len(prior_variance)))
-            bound_estimator_obj = bound_estimator_catoni(model, loss_fn_bound[0], true_dataloader, train_suffix_dataloader,
+            bound_estimator_obj = bound_estimator_catoni(model, loss_fn_bound[0], train_dataloader,
                                                   prior_mean=prior_mean)
             bound_estimator_obj.fit()
             bound_estimator_obj.prior_variance = prior_var.item()
@@ -394,7 +394,7 @@ def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
             # Estimate the B_mixed and B_original bound
             bound_estimator_obj.estimate(bound_types={'mixed', 'original'}, grid_lambda=grid_lambda,
                                          min_temperature=min_temperature,
-                                         max_temperature=max_temperature,n_f=n_f,n_XY=n_XY)
+                                         max_temperature=max_temperature)
 
             # Estimate validation set risk
             risk_estimator = metrics_different_temperatures(test_dataloader, bound_estimator_obj.la)

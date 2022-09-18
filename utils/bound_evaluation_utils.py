@@ -73,6 +73,12 @@ class bound_estimator_diagonal:
         """
         return NotImplementedError
 
+    def compute_terms(self):
+        """
+        Computes the bound terms for the given lambdas and adds them to the terms_dictionary.
+        """
+        return NotImplementedError
+
     def fit(self):
         '''
         Use the deterministic model to estimate important common variables for the bounds.
@@ -103,22 +109,6 @@ class bound_estimator_diagonal:
 
         return
 
-    def compute_terms(self):
-        """
-        Computes the bound terms for the given lambdas and adds them to the terms_dictionary.
-        """
-        if 'empirical_risk' in self.effective_bound_dependencies:
-            self.bound_terms['empirical_risk'] = torch.tensor(self.empirical_risk())
-        if 'kl' in self.effective_bound_dependencies:
-            self.bound_terms['kl'] = torch.tensor(self.kl())
-        if 'moment' in self.effective_bound_dependencies:
-            self.bound_terms['moment'] = torch.tensor(self.moment())
-        if 'moment_MC' in self.effective_bound_dependencies:
-            self.bound_terms['moment_MC'] = torch.tensor(self.moment_MC())
-        if 'empirical_risk_MC' in self.effective_bound_dependencies:
-            self.bound_terms['empirical_risk_MC'] = torch.tensor(self.empirical_risk_MC())
-
-        return
 
     def empirical_risk(self):
         '''
@@ -372,6 +362,25 @@ class bound_estimator_alquier(bound_estimator_diagonal):
 
         return res
 
+    def compute_terms(self):
+        """
+        Computes the bound terms for the given lambdas and adds them to the terms_dictionary.
+        """
+
+        if 'kl' in self.effective_bound_dependencies:
+            self.bound_terms['kl'] = torch.tensor(self.kl())
+        if 'empirical_risk' in self.effective_bound_dependencies:
+            self.bound_terms['empirical_risk'] = torch.tensor(self.empirical_risk())
+        if 'empirical_risk_MC' in self.effective_bound_dependencies:
+            self.bound_terms['empirical_risk_MC'] = torch.tensor(self.empirical_risk_MC())
+        if 'moment' in self.effective_bound_dependencies:
+            self.bound_terms['moment'] = torch.tensor(self.moment())
+        if 'moment_MC' in self.effective_bound_dependencies:
+            self.bound_terms['moment_MC'] = torch.tensor(self.moment_MC())
+
+
+        return
+
 
 class bound_estimator_catoni(bound_estimator_diagonal):
     """
@@ -410,6 +419,27 @@ class bound_estimator_catoni(bound_estimator_diagonal):
         self._prior_variance = prior_variance
         if self.la != None:
             self.la.prior_precision = 1 / self.prior_variance
+
+    def save(self, path):
+        """
+        This function saves the bound parameters at the 'path' location.
+        """
+
+        log = {
+            'n': self.n,
+            'd': self.d,
+            'h': self.h,
+            'norm_diff': self.norm_diff,
+            'map_emp_risk': self.map_emp_risk
+        }
+        for term in list(self.bound_terms.keys()):
+            log[term] = self.bound_terms[term].cpu().detach().numpy()
+
+        results_file = open(path, "wb")
+        pickle.dump(log, results_file)
+        results_file.close()
+
+        return
 
     def estimate(self, bound_types={'original'}
                  , n_samples_MC_emp=100, min_temperature=0.1
@@ -472,4 +502,18 @@ class bound_estimator_catoni(bound_estimator_diagonal):
         lambdas: The temperature values.
         """
         return (1 - torch.exp(-lambdas * linear_term_values)) / (1 - torch.exp(-lambdas))
+
+    def compute_terms(self):
+        """
+        Computes the bound terms for the given lambdas and adds them to the terms_dictionary.
+        """
+
+        if 'kl' in self.effective_bound_dependencies:
+            self.bound_terms['kl'] = torch.tensor(self.kl())
+        if 'empirical_risk' in self.effective_bound_dependencies:
+            self.bound_terms['empirical_risk'] = torch.tensor(self.empirical_risk())
+        if 'empirical_risk_MC' in self.effective_bound_dependencies:
+            self.bound_terms['empirical_risk_MC'] = torch.tensor(self.empirical_risk_MC())
+
+        return
 

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481d24e-fd88-4fe1-840c-09e0a307ac5e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/bound_evaluation_utils_old.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/fashionmnist_test-val.py" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/fashionmnist_test-val.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/svhn_test-val.py" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/svhn_test-val.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/bound_evaluation_utils.py" afterPath="$PROJECT_DIR$/utils/bound_evaluation_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" afterPath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/test_laplace_evaluation_classification.py" afterPath="$PROJECT_DIR$/utils/test_laplace_evaluation_classification.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/test_laplace_evaluation_regression.py" afterPath="$PROJECT_DIR$/utils/test_laplace_evaluation_regression.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,42 +20,62 @@
     <favorites_list name="cold-warm-posteriors" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="multiple_standard_data_experiments_utils.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="371" column="0" lean-forward="false" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bound_evaluation_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
-              <caret line="218" column="24" lean-forward="false" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baselaplace_extension.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3195">
-              <caret line="402" column="33" lean-forward="false" selection-start-line="402" selection-start-column="14" selection-end-line="402" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.49204406">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="multiple_standard_data_experiments_utils.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="682">
+                  <caret line="408" column="82" lean-forward="false" selection-start-line="408" selection-start-column="75" selection-end-line="408" selection-end-column="82" />
+                  <folding>
+                    <element signature="e#0#71#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="bound_evaluation_utils.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-5529">
+                  <caret line="79" column="34" lean-forward="false" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#12#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="baselaplace_extension.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3195">
+                  <caret line="402" column="33" lean-forward="false" selection-start-line="402" selection-start-column="14" selection-end-line="402" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="bound_evaluation_utils.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-413">
+                  <caret line="442" column="0" lean-forward="true" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#12#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -168,8 +182,8 @@
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/cifar100_test-val.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/svhn_test-val.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/fashionmnist_test-val.py" />
-        <option value="$PROJECT_DIR$/utils/bound_evaluation_utils.py" />
         <option value="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" />
+        <option value="$PROJECT_DIR$/utils/bound_evaluation_utils.py" />
       </list>
     </option>
   </component>
@@ -521,7 +535,7 @@
     <frame x="0" y="23" width="1920" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27698788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13954712" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1285,6 +1299,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1304,22 +1319,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
+    <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="218" column="24" lean-forward="false" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="24" />
+        <state relative-caret-position="682">
+          <caret line="408" column="82" lean-forward="false" selection-start-line="408" selection-start-column="75" selection-end-line="408" selection-end-column="82" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
+    <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="371" column="0" lean-forward="false" selection-start-line="371" selection-start-column="0" selection-end-line="371" selection-end-column="0" />
+        <state relative-caret-position="-413">
+          <caret line="442" column="0" lean-forward="true" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
           <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
