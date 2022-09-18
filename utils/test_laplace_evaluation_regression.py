@@ -5,7 +5,7 @@ from laplace_package_extensions.model.model_utils import load_model, test_loop
 from scripts.regression_datasets.regression_torch_datasets import AbaloneDataset,data_split
 
 from utils.laplace_evaluation_utils import metrics_different_temperatures,Gaussian_nll_predictive
-from utils.bound_evaluation_utils import bound_estimator
+from utils.bound_evaluation_utils_old import bound_estimator
 
 import pickle
 

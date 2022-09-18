@@ -17,12 +17,12 @@ def softmax(x):
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
        'classification_experiments/fashionmnist/results/runs/'
 
-metric = 'zero_one'
+metric = 'nll'
 nlls = {}
 original_bounds= {}
 models = [0,1,2,3,4,5,6,7,8,9]
 
-runs = ['run_3']
+runs = ['run_3','run_4','run_5']
 
 test,val,lambdas = multiple_runs_concatenation(path=path,runs=runs,models=models,metric=metric)
 

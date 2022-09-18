@@ -5,7 +5,7 @@ from scripts.laplace_redux_tests.model_classification.model_utils import load_mo
 from scripts.classification_datasets.mnist.mnist_torch_dataset import MNIST_split
 
 from utils.laplace_evaluation_utils import metrics_different_temperatures,NLLLoss_with_log_transform,zero_one_loss,ECE_wrapper
-from utils.bound_evaluation_utils import bound_estimator
+from utils.bound_evaluation_utils_old import bound_estimator
 
 import pickle
 

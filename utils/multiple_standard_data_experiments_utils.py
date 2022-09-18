@@ -6,7 +6,8 @@ from torch.nn.utils import parameters_to_vector
 import pickle
 from utils.laplace_evaluation_utils import metrics_different_temperatures,Timer
 import numpy as np
-from utils.bound_evaluation_utils import bound_estimator
+#from utils.bound_evaluation_utils_old import bound_estimator
+from utils.bound_evaluation_utils import bound_estimator_alquier,bound_estimator_catoni
 from laplace.curvature import AsdlGGN
 from laplace_package_extensions.laplace_extension import Laplace
 from os import path
@@ -101,7 +102,7 @@ def estimate_all_bounds(prior_variance,true_dataloader,train_suffix_dataloader,t
         The Dataloader of the training set.
     test_dataloader:    torch.Dataloader
         The Dataloader of the test set.
-    grid_lambda: float
+    grid_lambda: int
         The number of samples between min_temperature and max_temperature for which the bounds are evaluated.
     min_temperature: float
         The minimum value of parameter \lambda.
@@ -119,9 +120,9 @@ def estimate_all_bounds(prior_variance,true_dataloader,train_suffix_dataloader,t
         The losses used for testing.
     loss_functions_test_names:  Python list of strings
         The names of the loss functions used for testing.
-    n_f:    float
+    n_f:    int
         The number of samples from the posterior when estimating the Moment term by MC.
-    n_XY:   float
+    n_XY:   int
         The number of samples from the true data distribution when estimating the Moment term by MC. Note that
         each sample is actually X,Y each of size #train or #trainsuffix (usually the lastone).
     """
@@ -141,7 +142,7 @@ def estimate_all_bounds(prior_variance,true_dataloader,train_suffix_dataloader,t
 
         for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
             print('Variance #'+str(iter)+'/'+str(len(prior_variance)))
-            bound_estimator_obj = bound_estimator(model, loss_fn_bound[0], true_dataloader, train_suffix_dataloader,
+            bound_estimator_obj = bound_estimator_alquier(model, loss_fn_bound[0], true_dataloader, train_suffix_dataloader,
                                                   prior_mean=prior_mean,likelihood=likelihood)
             bound_estimator_obj.fit()
             bound_estimator_obj.prior_variance = prior_var.item()
@@ -337,3 +338,75 @@ def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_datal
                         min_temperature,max_temperature,grid_prior_variance,min_prior_variance,max_prior_variance,
                         n_samples,hessian_structure,subset_of_weights))
 
+
+def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
+                        grid_lambda,min_temperature,max_temperature,n_samples,model,loss_fn_bound,loss_functions_test,
+                        loss_functions_test_names):
+    """
+    This script finds all models in a given folder, estimates the catoni bound and saves the results in the same folder.
+
+    Parameters
+    ----------
+    prior_variance: torch.tensor
+        The prior variances for which to estimate the bounds.
+    train_dataloader:   torch.Dataloader
+        The Dataloader of the training set.
+    test_dataloader:    torch.Dataloader
+        The Dataloader of the test set.
+    grid_lambda: float
+        The number of samples between min_temperature and max_temperature for which the bounds are evaluated.
+    min_temperature: float
+        The minimum value of parameter \lambda.
+    max_temperature: float
+        The maximum value of parameter \lambda.
+    n_samples: float
+        The number of Monte Carlo samples when estimating the test risk.
+    model:  torch.Sequential.model
+        The deterministic model on which we will fit our LA and estimate bounds.
+    loss_fn_bound:  Python list
+        The loss used for training the deterministic model.
+    loss_functions_test: Python list
+        The losses used for testing.
+    loss_functions_test_names:  Python list of strings
+        The names of the loss functions used for testing.
+    """
+
+    timer = Timer(len(glob("*/")))
+    folders = glob("*/")
+    folders.sort()
+    for folder in folders:
+        timer.time()
+
+        # Load prior mean
+        model.load_state_dict(torch.load(folder + 'prior_mean.pt'))
+        prior_mean = parameters_to_vector(model.parameters()).detach()
+
+        # Load posterior mean
+        model.load_state_dict(torch.load(folder + 'prior_mean.pt'))
+
+        for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
+            print('Variance #'+str(iter)+'/'+str(len(prior_variance)))
+            bound_estimator_obj = bound_estimator_catoni(model, loss_fn_bound[0], true_dataloader, train_suffix_dataloader,
+                                                  prior_mean=prior_mean)
+            bound_estimator_obj.fit()
+            bound_estimator_obj.prior_variance = prior_var.item()
+
+            # Estimate the B_mixed and B_original bound
+            bound_estimator_obj.estimate(bound_types={'mixed', 'original'}, grid_lambda=grid_lambda,
+                                         min_temperature=min_temperature,
+                                         max_temperature=max_temperature,n_f=n_f,n_XY=n_XY)
+
+            # Estimate validation set risk
+            risk_estimator = metrics_different_temperatures(test_dataloader, bound_estimator_obj.la)
+            risk_estimator.estimate(loss_functions_test,loss_functions_test_names , mode='posterior',
+                                    lambdas=bound_estimator_obj.lambdas,
+                                    n_samples=n_samples)
+
+            # Save hyperparameters
+            bound_estimator_obj.save(folder + 'bound_log_' + str(iter) + '.pkl')
+
+            # Save results
+            all_results = {**bound_estimator_obj.results, **risk_estimator.results}
+            results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
+            pickle.dump(all_results, results_file)
+            results_file.close()
