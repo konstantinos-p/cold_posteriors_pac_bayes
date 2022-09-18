@@ -339,7 +339,7 @@ def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_datal
                         n_samples,hessian_structure,subset_of_weights))
 
 
-def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
+def estimate_all_bounds_catoni(prior_variance,train_dataloader,test_dataloader,
                         grid_lambda,min_temperature,max_temperature,n_samples,model,loss_fn_bound,loss_functions_test,
                         loss_functions_test_names):
     """
@@ -384,12 +384,39 @@ def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
         # Load posterior mean
         model.load_state_dict(torch.load(folder + 'prior_mean.pt'))
 
-        for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
-            print('Variance #'+str(iter)+'/'+str(len(prior_variance)))
+        if len(prior_variance)>=1:
+            for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
+                print('Variance #'+str(iter)+'/'+str(len(prior_variance)))
+                bound_estimator_obj = bound_estimator_catoni(model, loss_fn_bound[0], train_dataloader,
+                                                      prior_mean=prior_mean)
+                bound_estimator_obj.fit()
+                bound_estimator_obj.prior_variance = prior_var.item()
+
+                # Estimate the B_mixed and B_original bound
+                bound_estimator_obj.estimate(bound_types={'mixed', 'original'}, grid_lambda=grid_lambda,
+                                             min_temperature=min_temperature,
+                                             max_temperature=max_temperature)
+
+                # Estimate validation set risk
+                risk_estimator = metrics_different_temperatures(test_dataloader, bound_estimator_obj.la)
+                risk_estimator.estimate(loss_functions_test,loss_functions_test_names , mode='posterior',
+                                        lambdas=bound_estimator_obj.lambdas,
+                                        n_samples=n_samples)
+
+                # Save hyperparameters
+                bound_estimator_obj.save(folder + 'bound_log_' + str(iter) + '.pkl')
+
+                # Save results
+                all_results = {**bound_estimator_obj.results, **risk_estimator.results}
+                results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
+                pickle.dump(all_results, results_file)
+                results_file.close()
+        else:
+
+            print('Variance # optimized with the marginal likelihood')
             bound_estimator_obj = bound_estimator_catoni(model, loss_fn_bound[0], train_dataloader,
-                                                  prior_mean=prior_mean)
+                                                         prior_mean=prior_mean)
             bound_estimator_obj.fit()
-            bound_estimator_obj.prior_variance = prior_var.item()
 
             # Estimate the B_mixed and B_original bound
             bound_estimator_obj.estimate(bound_types={'mixed', 'original'}, grid_lambda=grid_lambda,
@@ -398,15 +425,15 @@ def estimate_all_catoni(prior_variance,train_dataloader,test_dataloader,
 
             # Estimate validation set risk
             risk_estimator = metrics_different_temperatures(test_dataloader, bound_estimator_obj.la)
-            risk_estimator.estimate(loss_functions_test,loss_functions_test_names , mode='posterior',
+            risk_estimator.estimate(loss_functions_test, loss_functions_test_names, mode='posterior',
                                     lambdas=bound_estimator_obj.lambdas,
                                     n_samples=n_samples)
 
             # Save hyperparameters
-            bound_estimator_obj.save(folder + 'bound_log_' + str(iter) + '.pkl')
+            bound_estimator_obj.save(folder + 'bound_log.pkl')
 
             # Save results
             all_results = {**bound_estimator_obj.results, **risk_estimator.results}
-            results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
+            results_file = open(folder + 'results.pkl', "wb")
             pickle.dump(all_results, results_file)
             results_file.close()

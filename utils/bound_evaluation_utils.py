@@ -91,6 +91,8 @@ class bound_estimator_diagonal:
                           subset_of_weights='all',
                           hessian_structure='isotropic', prior_mean=self.prior_mean)
         self.la.fit(self.train_dataloader)
+        self.la.optimize_prior_precision()
+        self.prior_variance = 1 /self.la.prior_precision
 
         # Get number of training data
         self.n = self.la.n_data
