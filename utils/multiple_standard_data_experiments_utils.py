@@ -6,7 +6,6 @@ from torch.nn.utils import parameters_to_vector
 import pickle
 from utils.laplace_evaluation_utils import metrics_different_temperatures,Timer
 import numpy as np
-#from utils.bound_evaluation_utils_old import bound_estimator
 from utils.bound_evaluation_utils import bound_estimator_alquier,bound_estimator_catoni
 from laplace.curvature import AsdlGGN
 from laplace_package_extensions.laplace_extension import Laplace
@@ -331,12 +330,11 @@ def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_datal
         pickle.dump(results, results_file)
         results_file.close()
 
-        #Save readme file
-        path.exists(folder+'hyperparameters.txt')
-        with open('hyperparameters.txt', 'w') as f:
-            f.write('The results were obtained with the following hyperparameters \n\n grid_lambda: {} \n min_temperature: {} \n max_temperature: {} \n grid_prior_variance: {} \n min_prior_variance: {} \n max_prior_variance: {} \n n_samples: {} \n hessian_structure: {} \n subset_of_weights: {}' .format(grid_lambda,
-                        min_temperature,max_temperature,grid_prior_variance,min_prior_variance,max_prior_variance,
-                        n_samples,hessian_structure,subset_of_weights))
+    #Save readme file
+    with open('hyperparameters.txt', 'w') as f:
+        f.write('The results were obtained with the following hyperparameters \n\n grid_lambda: {} \n min_temperature: {} \n max_temperature: {} \n grid_prior_variance: {} \n min_prior_variance: {} \n max_prior_variance: {} \n n_samples: {} \n hessian_structure: {} \n subset_of_weights: {}' .format(grid_lambda,
+                    min_temperature,max_temperature,grid_prior_variance,min_prior_variance,max_prior_variance,
+                    n_samples,hessian_structure,subset_of_weights))
 
 
 def estimate_all_bounds_catoni(prior_variance,train_dataloader,test_dataloader,
@@ -378,11 +376,11 @@ def estimate_all_bounds_catoni(prior_variance,train_dataloader,test_dataloader,
         timer.time()
 
         # Load prior mean
-        model.load_state_dict(torch.load(folder + 'prior_mean.pt'))
+        model.load_state_dict(torch.load(folder + 'posterior_mean.pt'))
         prior_mean = parameters_to_vector(model.parameters()).detach()
 
         # Load posterior mean
-        model.load_state_dict(torch.load(folder + 'prior_mean.pt'))
+        model.load_state_dict(torch.load(folder + 'posterior_mean.pt'))
 
         if len(prior_variance)>=1:
             for prior_var, iter in zip(prior_variance, np.arange(len(prior_variance))):
@@ -411,6 +409,13 @@ def estimate_all_bounds_catoni(prior_variance,train_dataloader,test_dataloader,
                 results_file = open(folder + 'results_' + str(iter) + '.pkl', "wb")
                 pickle.dump(all_results, results_file)
                 results_file.close()
+
+            # Save readme file
+            with open('hyperparameters.txt', 'w') as f:
+                f.write(
+                    'The results were obtained with the following hyperparameters \n\n grid_lambda: {} \n min_temperature: {} \n max_temperature: {}  \n n_samples: {} \n hessian_structure: {} \n subset_of_weights: {}'.format(
+                        grid_lambda,
+                        min_temperature, max_temperature, n_samples, 'isotropic', 'all'))
         else:
 
             print('Variance # optimized with the marginal likelihood')
@@ -437,3 +442,10 @@ def estimate_all_bounds_catoni(prior_variance,train_dataloader,test_dataloader,
             results_file = open(folder + 'results.pkl', "wb")
             pickle.dump(all_results, results_file)
             results_file.close()
+
+            # Save readme file
+            with open('hyperparameters.txt', 'w') as f:
+                f.write(
+                    'The results were obtained with the following hyperparameters \n\n grid_lambda: {} \n min_temperature: {} \n max_temperature: {}  \n n_samples: {} \n hessian_structure: {} \n subset_of_weights: {}'.format(
+                        grid_lambda,
+                        min_temperature, max_temperature, n_samples, 'isotropic', 'all'))

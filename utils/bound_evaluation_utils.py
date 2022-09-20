@@ -3,7 +3,7 @@ from laplace_package_extensions.laplace_extension import Laplace
 import numpy as np
 from utils.laplace_evaluation_utils import risk_evaluation_loop, risk_per_sample_loop
 import pickle
-
+from laplace.curvature import AsdlGGN
 
 class bound_estimator_diagonal:
     """
@@ -89,10 +89,10 @@ class bound_estimator_diagonal:
         # Fit Laplace approximation
         self.la = Laplace(self.model, likelihood=self.likelihood, prior_precision=1 / self.prior_variance,
                           subset_of_weights='all',
-                          hessian_structure='isotropic', prior_mean=self.prior_mean)
+                          hessian_structure='isotropic', prior_mean=self.prior_mean,backend=AsdlGGN)
         self.la.fit(self.train_dataloader)
         self.la.optimize_prior_precision()
-        self.prior_variance = 1 /self.la.prior_precision
+        self.prior_variance = 1 /self.la.prior_precision.item()
 
         # Get number of training data
         self.n = self.la.n_data
@@ -125,10 +125,10 @@ class bound_estimator_diagonal:
         The KL term.
         '''
         a = (self.d / self.prior_variance) * (
-        1 / (2 * self.lambdas.cpu().numpy() * self.h.cpu().numpy() / self.n + 1 / self.prior_variance))
+        1 / (self.lambdas.cpu().numpy() * self.h.cpu().numpy() / self.d + 1 / self.prior_variance))
         b = (1 / self.prior_variance) * self.norm_diff.cpu().numpy()
         c = -self.d - self.d * np.log(
-            (1 / (2 * self.lambdas.cpu().numpy() * self.h.cpu().numpy() / self.n + 1 / self.prior_variance)))
+            (1 / (self.lambdas.cpu().numpy() * self.h.cpu().numpy() / self.d + 1 / self.prior_variance)))
         d = self.d * np.log(self.prior_variance)
 
         return (1 / (self.lambdas.cpu().numpy() * self.n)) * ((1 / 2) * (a + b + c + d) + np.log(1 / self.delta))
@@ -262,7 +262,7 @@ class bound_estimator_alquier(bound_estimator_diagonal):
             # Get the weight variance of the per sample gradients.
             la_true = Laplace(self.model, likelihood='regression', prior_precision=1 / self.prior_variance,
                               subset_of_weights='all',
-                              hessian_structure='isotropic')
+                              hessian_structure='isotropic',backend=AsdlGGN)
             la_true.fit(self.true_dataloader)
             self.sigma_x = la_true.H[0]
 
@@ -430,10 +430,11 @@ class bound_estimator_catoni(bound_estimator_diagonal):
         log = {
             'n': self.n,
             'd': self.d,
-            'h': self.h,
-            'norm_diff': self.norm_diff,
+            'h': self.h.cpu().detach().numpy(),
+            'norm_diff': self.norm_diff.cpu().detach().numpy(),
             'map_emp_risk': self.map_emp_risk
         }
+
         for term in list(self.bound_terms.keys()):
             log[term] = self.bound_terms[term].cpu().detach().numpy()
 
@@ -487,7 +488,7 @@ class bound_estimator_catoni(bound_estimator_diagonal):
             # Sum the components of each bound
             linear_term_values = torch.stack(list(map(self.bound_terms.get, self.bound_dependencies[bound])),
                                              dim=0).sum(dim=0)
-            bound_vals = self.nonlinear_catoni_function(linear_term_values, self.lambdas)
+            bound_vals = self.nonlinear_catoni_function(linear_term_values.to(self.device), self.lambdas)
             # Save the lambda and bound values
             self.results[bound] = [self.lambdas.cpu().detach().numpy(), bound_vals.cpu().detach().numpy()]
 
