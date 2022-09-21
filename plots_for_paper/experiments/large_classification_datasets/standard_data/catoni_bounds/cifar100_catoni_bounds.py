@@ -19,8 +19,9 @@ bound_log_file = pickle.load(bound_log_file)
 
 nlls=[]
 original_bounds=[]
+models = [0,1,2,3,4,5,6,7,8]
 
-for i in range(9):
+for i in models:
     results_file1 = open(path+"/results_"+str(i)+".pkl", "rb")
     output1 = pickle.load(results_file1)
     nlls.append(np.reshape(output1['zero_one'][1],(1,-1)))

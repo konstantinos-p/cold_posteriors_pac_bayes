@@ -143,11 +143,11 @@ plt.plot(x_linspace,x_linspace,color='black',linestyle='--',linewidth=2)
 
 
 
-patch1 = Line2D([0], [0], marker='s', color='w', label='Abalone',
+patch1 = Line2D([0], [0], marker='o', color='w', label='Abalone',
                       markerfacecolor=colors[0], markersize=10)
 patch2 = Line2D([0], [0], marker='s', color='w', label='Diamonds',
                       markerfacecolor=colors[1], markersize=10)
-patch3 = Line2D([0], [0], marker='s', color='w', label='KC_House',
+patch3 = Line2D([0], [0], marker='^', color='w', label='KC_House',
                       markerfacecolor=colors[2], markersize=10)
 
 
