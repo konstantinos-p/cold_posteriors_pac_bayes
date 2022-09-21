@@ -154,7 +154,69 @@ def multiple_runs_concatenation(path,runs,models,metric):
 
     return mul_run_results_test,mul_run_results_validation,mul_run_lambdas
 
+def multiple_bounds_concatenation(path,bound_components,models,metric,bound_type):
+    '''
+    Concatenates the results of multiple bounds.
 
+    Parameters
+    ----------
+    path: string
+        The path of the multiple bounds.
+    runs: Python list
+        The names of the bounds to concatenate. The list should contain strings of the form
+        bound_0,bound_1
+    models: Python list
+        A list of numbers of different models to use.
+    metric: {'zero_one','nll','ECE'}
+
+    Returns
+    -------
+    mul_run_results_test: torch.tensor
+        The concatenated test metric results from multiple bound_components and models.
+    mul_run_results_bound: torch.tensor
+        The concatenated bound results from multiple bound_components and models.
+    mul_run_lambdas: torch.tensor
+        The concatenated lambdas from multiple bound_components and models.
+    '''
+    mul_run_results_test = []
+    mul_run_results_bound = []
+    mul_run_lambdas = []
+
+    for bound_component in bound_components:
+        test=[]
+        bound=[]
+        for model in models:
+            results_file1 = open(path + bound_component +"/results_" + str(model) + ".pkl", "rb")
+            output1 = pickle.load(results_file1)
+            test.append(np.reshape(output1[metric][1], (1, -1)))
+            bound.append(np.reshape(output1[bound_type][1], (1, -1)))
+
+        lambdas = np.reshape(np.array(output1[bound_type][0]), (-1))
+
+        test = np.concatenate(test, axis=0)
+        bound = np.concatenate(bound, axis=0)
+
+        mul_run_results_test.append(test)
+        mul_run_results_bound.append(bound)
+        mul_run_lambdas.append(lambdas)
+
+    mul_run_results_test = np.concatenate(mul_run_results_test, axis=1)
+    mul_run_results_bound = np.concatenate(mul_run_results_bound, axis=1)
+    mul_run_lambdas = np.concatenate(mul_run_lambdas)
+
+    sort_seq = np.argsort(mul_run_lambdas)
+    mul_run_lambdas = mul_run_lambdas[sort_seq]
+    mul_run_results_test = mul_run_results_test[:,sort_seq]
+    mul_run_results_bound = mul_run_results_bound[:,sort_seq]
+
+
+    return mul_run_results_test,mul_run_results_bound,mul_run_lambdas
+
+def to_zero_one(x):
+    if np.amin(x)<0:
+        x+=np.amin(x)
+    x = x/np.amax(x)
+    return x
 
 
 

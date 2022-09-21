@@ -18,8 +18,6 @@ path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_e
        'classification_experiments/fashionmnist/results/runs/isotropic/'
 
 metric = 'nll'
-nlls = {}
-original_bounds= {}
 models = [0,1,2,3,4,5,6,7,8,9]
 
 runs = ['run_0','run_1','run_2']

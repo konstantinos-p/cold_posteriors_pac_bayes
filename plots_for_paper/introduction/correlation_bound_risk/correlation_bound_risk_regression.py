@@ -1,9 +1,9 @@
-from utils.plot_utils import normalize
+from utils.plot_utils import normalize,to_zero_one
 import pickle
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
-from sklearn.linear_model import LinearRegression
+from matplotlib.colors import Normalize
 
 """
 Plot the correlation of the bound with the risk for the case of regression.
@@ -47,7 +47,7 @@ for i in range(9):
     original_bounds.append(np.reshape(output1['original'][1],(1,-1)))
 
 
-lambdas = output1['GaussianNLL'][0]
+lambdas_diamonds = output1['GaussianNLL'][0]
 
 axis= 0
 
@@ -109,34 +109,35 @@ size_font_legend = 15
 size_font_axis = 20
 tick_size = 10
 
-fig1, ax1 = plt.subplots(figsize=(3,3))
+fig1, ax1 = plt.subplots(figsize=(3.8,3))
 plt.xlabel('$\mathcal{B}_{\mathrm{original}}$', fontsize=size_font_axis)
 plt.ylabel('$\mathrm{Test \; nll}$', fontsize=size_font_axis)
 
 
 linewidth_m = 7
 smoothness = 0.1
-area = (7 * 1) ** 2  # 0 to 15 point radii
+area = (8 * 1) ** 2  # 0 to 15 point radii
 
 colors = ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33']
+cmap = plt.colormaps["plasma"]
 
 # Plots
 #Normalization
-plt.scatter(original_bounds_mean_abalone,nlls_mean_abalone, s=area, marker='o', c=colors[0])
-plt.scatter(original_bounds_mean_diamonds,nlls_mean_diamonds, s=area, marker='s', c=colors[1])
-plt.scatter(original_bounds_mean_kc_house,nlls_mean_kc_house, s=area, marker='^', c=colors[2])
+plt.scatter(original_bounds_mean_abalone,nlls_mean_abalone, s=area, marker='o', c=cmap(to_zero_one(lambdas_abalone)),alpha=0.7)
+plt.scatter(original_bounds_mean_diamonds,nlls_mean_diamonds, s=area, marker='s', c=cmap(to_zero_one(lambdas_diamonds)),alpha=0.7)
+plt.scatter(original_bounds_mean_kc_house,nlls_mean_kc_house, s=area, marker='^', c=cmap(to_zero_one(lambdas_kc_house)),alpha=0.7)
 
 #Plot optimal correlation line
 x_linspace = np.reshape(np.linspace(-1,4.5,20),(-1,1))
 
-reg1 = LinearRegression().fit(original_bounds_mean_abalone, nlls_mean_abalone)
-plt.plot(x_linspace,reg1.predict(x_linspace),color=colors[0],linestyle='-',linewidth=2)
+#reg1 = LinearRegression().fit(original_bounds_mean_abalone, nlls_mean_abalone)
+#plt.plot(x_linspace,reg1.predict(x_linspace),color=colors[0],linestyle='-',linewidth=2)
 
-reg2 = LinearRegression().fit(original_bounds_mean_diamonds, nlls_mean_diamonds)
-plt.plot(x_linspace,reg2.predict(x_linspace),color=colors[1],linestyle='-',linewidth=2)
+#reg2 = LinearRegression().fit(original_bounds_mean_diamonds, nlls_mean_diamonds)
+#plt.plot(x_linspace,reg2.predict(x_linspace),color=colors[1],linestyle='-',linewidth=2)
 
-reg3 = LinearRegression().fit(original_bounds_mean_kc_house, nlls_mean_kc_house)
-plt.plot(x_linspace,reg3.predict(x_linspace),color=colors[2],linestyle='-',linewidth=2)
+#reg3 = LinearRegression().fit(original_bounds_mean_kc_house, nlls_mean_kc_house)
+#plt.plot(x_linspace,reg3.predict(x_linspace),color=colors[2],linestyle='-',linewidth=2)
 
 plt.plot(x_linspace,x_linspace,color='black',linestyle='--',linewidth=2)
 
@@ -144,14 +145,16 @@ plt.plot(x_linspace,x_linspace,color='black',linestyle='--',linewidth=2)
 
 
 patch1 = Line2D([0], [0], marker='o', color='w', label='Abalone',
-                      markerfacecolor=colors[0], markersize=10)
+                      markerfacecolor=cmap(1), markersize=10)
 patch2 = Line2D([0], [0], marker='s', color='w', label='Diamonds',
-                      markerfacecolor=colors[1], markersize=10)
+                      markerfacecolor=cmap(1), markersize=10)
 patch3 = Line2D([0], [0], marker='^', color='w', label='KC_House',
-                      markerfacecolor=colors[2], markersize=10)
+                      markerfacecolor=cmap(1), markersize=10)
 
 
 plt.legend(loc=4, handles=[patch1,patch2,patch3], fontsize=size_font_legend/1.3)
+plt.colorbar(plt.cm.ScalarMappable(norm=Normalize(0.1, 20), cmap=cmap),
+             ax=ax1, label="$\lambda$")
 
 # Figure formating
 plt.grid(linestyle=':', color='k')

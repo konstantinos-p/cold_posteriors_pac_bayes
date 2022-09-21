@@ -2,6 +2,7 @@ import pickle
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
+from utils.plot_utils import multiple_bounds_concatenation
 
 """
 Plot for the svhn dataset original bound.
@@ -11,35 +12,24 @@ def scale01(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/' \
-       'standard_data/classification_experiments/svhn/results/bounds/marginal_likelihood/bound_0'
+       'standard_data/classification_experiments/svhn/results/bounds/marginal_likelihood/'
 
-bound_log_file = open(path + "/bound_log_0.pkl", "rb")
-bound_log_file = pickle.load(bound_log_file)
+models = [0,1,2,3,4,5,6,7,8,9]
+metric = 'zero_one'
+bound_type = 'original'
+bound_components = ['bound_0','bound_1']
 
-
-nlls=[]
-original_bounds=[]
-
-for i in range(9):
-    results_file1 = open(path+"/results_"+str(i)+".pkl", "rb")
-    output1 = pickle.load(results_file1)
-    nlls.append(np.reshape(output1['zero_one'][1],(1,-1)))
-    original_bounds.append(np.reshape(output1['original'][1],(1,-1)))
-
-
-lambdas = output1['nll'][0]
+test,bounds,lambdas =  multiple_bounds_concatenation(path=path,bound_components=bound_components,models=models,
+                                                     metric=metric,bound_type=bound_type)
 
 #Preprocess
 axis =0
 
-nlls = np.concatenate(nlls,axis=axis)
-original_bounds = np.concatenate(original_bounds,axis=axis)
+test_means = np.mean(test,axis=0)
+bound_means = np.mean(bounds,axis=0)
 
-nlls_means = np.mean(nlls,axis=0)
-original_bounds_means = np.mean(original_bounds,axis=0)
-
-nlls_stds = np.std(nlls,axis=0)
-original_bounds_stds = np.std(original_bounds,axis=0)
+test_stds = np.std(test,axis=0)
+bound_stds = np.std(bounds,axis=0)
 
 
 # Figure 1
@@ -68,8 +58,8 @@ offset3 = 0
 
 patches = []
 ax2 = ax1.twinx()
-ax1.plot(lambdas,nlls_means,linewidth=5, c=colors[1],linestyle='-')
-ax2.plot(lambdas,original_bounds_means,linewidth=5, c=colors[2],linestyle='--')
+ax1.plot(lambdas,test_means,linewidth=5, c=colors[1],linestyle='-')
+ax2.plot(lambdas,bound_means,linewidth=5, c=colors[2],linestyle='--')
 patches.append(Line2D([0], [0], marker='s', color='w', label='NLL',
                   markerfacecolor=colors[0], markersize=15))
 
