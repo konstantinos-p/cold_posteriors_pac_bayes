@@ -214,10 +214,125 @@ def multiple_bounds_concatenation(path,bound_components,models,metric,bound_type
 
 def to_zero_one(x):
     if np.amin(x)<0:
-        x+=np.amin(x)
+        x+=np.abs(np.amin(x))
     x = x/np.amax(x)
     return x
 
+def keep_last_elements(test,bound,lambdas,threshold):
+    '''
+    Test the test, bound and lambdas arrays and outputs a subsection of them after thresholding lambda.
+    '''
+
+    if len(test.shape)==1:
+        test = test[np.where(lambdas > threshold)]
+        bound = bound[np.where(lambdas > threshold)]
+        lambdas = lambdas[np.where(lambdas>threshold)]
+    else:
+        test = test[:,np.where(lambdas > threshold)]
+        bound = bound[:,np.where(lambdas > threshold)]
+        lambdas = lambdas[np.where(lambdas>threshold)]
+        test = test.squeeze()
+        bound = bound.squeeze()
+    return test,bound,lambdas
+
+def plot_catoni(ax,xlabel,lambdas,test_means,bound_means,test,title,legend,size_font_axis,
+                size_font_title,size_font_legend,border_linewidth,tick_size,vertline=True,ylabel1=None,ylabel2=None):
+    '''
+    Basic Catoni plot.
+    '''
+    if xlabel != None:
+        ax.set_xlabel(xlabel, fontsize=size_font_axis)
+    if ylabel1 != None:
+        ax.set_ylabel(ylabel1, fontsize=size_font_title)
+
+    cmap = plt.colormaps["plasma"]
+
+    # Plots
+    patches = []
+    ax2 = ax.twinx()
+    if ylabel2 != None:
+        ax2.set_ylabel(ylabel2, fontsize=size_font_title)
+    ax.plot(lambdas, test_means, linewidth=5, c=cmap(0), linestyle='-')
+    for test_num in range(test.shape[0]):
+        ax.plot(lambdas, test[test_num, :], linewidth=5, c=cmap(0), linestyle='-', alpha=0.2)
+    ax2.plot(lambdas, bound_means, linewidth=5, c=cmap(0.5), linestyle='--')
+    if legend == True:
+        patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{test}}$',
+                              markerfacecolor=cmap(0), markersize=15))
+        patches.append(Line2D([0], [0], marker='s', color='w', label='$\mathcal{B}_{\mathrm{Catoni}}$',
+                              markerfacecolor=cmap(0.5), markersize=15))
+
+        ax.legend(loc=0, handles=patches, fontsize=size_font_legend)
+    if vertline ==True:
+        ax.vlines(1,np.amin(test[np.isfinite(test)]),np.amax(test[np.isfinite(test)]), linewidth=5, linestyle='--',
+                   zorder=-1, alpha=0.5)
+    if title != None:
+        ax.set_title(title, fontsize=size_font_title)
+
+    # Figure formating
+    ax.grid(linestyle=':', color='grey', axis='y')
+    [i.set_linewidth(border_linewidth) for i in ax.spines.values()]
+    ax.set_xscale('log')
+
+    ax.tick_params(axis='both', which='major', labelsize=tick_size)
+    ax2.tick_params(axis='both', which='major', labelsize=tick_size)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+    ax2.spines['left'].set_visible(False)
+    ax2.tick_params(axis='y', colors=cmap(0.5))
+    ax.tick_params(axis='y', colors=cmap(0))
+    return
+
+
+def plot_test_val(ax1,xlabel,ylabel,lambdas,test_means,val_means,test,title,legend,size_font_axis,
+                size_font_title,size_font_legend,border_linewidth,tick_size,vertline=True):
+    # Figure 1
+    if xlabel != None:
+        ax1.set_xlabel(xlabel, fontsize=size_font_axis)
+    if ylabel != None:
+        ax1.set_ylabel(ylabel, fontsize=size_font_title)
+
+
+    cmap = plt.colormaps["plasma"]
+
+    # Plots
+    std_scale = 2
+
+    ax1.plot(lambdas, test_means, linewidth=5, c=cmap(0))
+    for test_num in range(test.shape[0]):
+        ax1.plot(lambdas, test[test_num, :], linewidth=5, c=cmap(0), linestyle='-', alpha=0.2)
+    ax1.plot(lambdas, val_means, linewidth=5, c=cmap(0.5), linestyle='--')
+    if legend == True:
+        patches = []
+        patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{test}}$',
+                              markerfacecolor=cmap(0), markersize=15))
+        patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{validation}}$',
+                              markerfacecolor=cmap(0.5), markersize=15))
+
+        ax1.legend(loc=1, handles=patches, fontsize=size_font_legend)
+    if vertline ==True:
+        ax1.vlines(1,np.amin(test[np.isfinite(test)]),np.amax(test[np.isfinite(test)]), linewidth=5, linestyle='--',
+                   zorder=-1, alpha=0.5)
+    if title != None:
+        ax1.set_title(title, fontsize=size_font_title)
+
+    # Figure formating
+    ax1.grid(linestyle=':', color='grey', axis='y')
+    [i.set_linewidth(border_linewidth) for i in ax1.spines.values()]
+    plt.tight_layout()
+    ax1.set_xscale('log')
+
+    ax1.tick_params(axis='both', which='major', labelsize=tick_size)
+
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+    ax1.spines['left'].set_visible(False)
+    #ax1.tick_params(axis='y', colors=cmap(0))
+    return
 
 
 

@@ -479,7 +479,7 @@ class bound_estimator_catoni(bound_estimator_diagonal):
 
         self.n_samples_MC_emp = n_samples_MC_emp
 
-        self.lambdas = torch.linspace(min_temperature, max_temperature, grid_lambda).to(self.device)
+        self.lambdas = torch.logspace(min_temperature, max_temperature, grid_lambda).to(self.device)
 
         # Compute terms for the different bounds.
         self.compute_terms()

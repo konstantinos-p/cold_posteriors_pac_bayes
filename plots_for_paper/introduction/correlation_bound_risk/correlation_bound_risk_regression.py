@@ -105,18 +105,20 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 size_font_title = 20
-size_font_legend = 15
-size_font_axis = 20
+size_font_legend = 15/1.5
+size_font_axis = 15
 tick_size = 10
+border_linewidth = 1.5
+
 
 fig1, ax1 = plt.subplots(figsize=(3.8,3))
-plt.xlabel('$\mathcal{B}_{\mathrm{original}}$', fontsize=size_font_axis)
-plt.ylabel('$\mathrm{Test \; nll}$', fontsize=size_font_axis)
+plt.xlabel('$\mathcal{B}_{\mathrm{Alquier}}$', fontsize=size_font_axis)
+plt.ylabel('Test NLL', fontsize=size_font_axis)
 
 
 linewidth_m = 7
 smoothness = 0.1
-area = (8 * 1) ** 2  # 0 to 15 point radii
+area = (12 * 1) ** 2  # 0 to 15 point radii
 
 colors = ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33']
 cmap = plt.colormaps["plasma"]
@@ -144,24 +146,24 @@ plt.plot(x_linspace,x_linspace,color='black',linestyle='--',linewidth=2)
 
 
 
-patch1 = Line2D([0], [0], marker='o', color='w', label='Abalone',
+patch1 = Line2D([0], [0], marker='o', color='w', label='ABALONE',
                       markerfacecolor=cmap(1), markersize=10)
-patch2 = Line2D([0], [0], marker='s', color='w', label='Diamonds',
+patch2 = Line2D([0], [0], marker='s', color='w', label='DIAMONDS',
                       markerfacecolor=cmap(1), markersize=10)
-patch3 = Line2D([0], [0], marker='^', color='w', label='KC_House',
+patch3 = Line2D([0], [0], marker='^', color='w', label='KC_HOUSE',
                       markerfacecolor=cmap(1), markersize=10)
 
 
 plt.legend(loc=4, handles=[patch1,patch2,patch3], fontsize=size_font_legend/1.3)
-plt.colorbar(plt.cm.ScalarMappable(norm=Normalize(0.1, 20), cmap=cmap),
+cb = plt.colorbar(plt.cm.ScalarMappable(norm=Normalize(0.1, 20), cmap=cmap),
              ax=ax1, label="$\lambda$")
-
+cb.outline.set_linewidth(border_linewidth)
 # Figure formating
 plt.grid(linestyle=':', color='k')
-plt.tight_layout()
 plt.xlim(np.amin(x_linspace),np.amax(x_linspace))
 plt.ylim(np.amin(x_linspace),np.amax(x_linspace))
-
-
+ax1.tick_params(axis='both', which='major', labelsize=tick_size)
+[i.set_linewidth(border_linewidth) for i in ax1.spines.values()]
+plt.tight_layout()
 
 end =1

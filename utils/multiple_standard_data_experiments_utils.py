@@ -285,7 +285,7 @@ def estimate_all_metrics_plain(train_dataloader,test_dataloader,validation_datal
     folders = glob("*/")
     folders.sort()
 
-    lambdas = torch.linspace(min_temperature, max_temperature, grid_lambda).to(next(model.parameters()).device)
+    lambdas = torch.logspace(min_temperature, max_temperature, grid_lambda).to(next(model.parameters()).device)
 
     for folder in folders:
         timer.time()

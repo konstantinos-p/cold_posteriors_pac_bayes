@@ -5,7 +5,7 @@ from matplotlib.lines import Line2D
 from utils.plot_utils import multiple_runs_concatenation
 
 """
-Plot the requires metrics for the test and validation sets of the cifar10 dataset.
+Plot the requires metrics for the test and validation sets of the cifar100 dataset.
 """
 def scale01(x):
     return x/np.max(x)
@@ -14,14 +14,14 @@ def softmax(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/augmented_data/' \
-       'classification_experiments/cifar10/results/runs/'
+       'classification_experiments/cifar100/results/runs/isotropic/'
 
-metric = 'nll'
+metric = 'zero_one'
 nlls = {}
 original_bounds= {}
-models = [0,2,4,5,6,7,9]#[0,3,4,6,7]
+models = [0,1,2,3,4,5,6,7,8,9]#[0,1,2,3] or  [0,1,4]
 
-runs = ['run_0','run_1']
+runs = ['run_0']
 
 test,val,lambdas = multiple_runs_concatenation(path=path,runs=runs,models=models,metric=metric)
 
@@ -31,7 +31,6 @@ nlls_means = {}
 nlls_stds = {}
 original_bounds_means = {}
 original_bounds_stds = {}
-
 
 test_means = np.mean(test,axis=0)
 val_means = np.mean(val,axis=0)

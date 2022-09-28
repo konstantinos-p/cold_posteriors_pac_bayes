@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib.lines import Line2D
-from utils.plot_utils import multiple_runs_concatenation
+from utils.plot_utils import multiple_runs_concatenation,keep_last_elements
 
 """
 Plot the requires metrics for the test and validation sets of the cifar100 dataset.
@@ -14,12 +14,12 @@ def softmax(x):
 
 
 path = '/Users/Kostas/PycharmProjects/cold-warm-posteriors/cold_warm_posterior_experiments/standard_data/' \
-       'classification_experiments/cifar100/results/runs/isotropic/'
+       'classification_experiments/cifar100/results/runs/kron/'
 
 metric = 'zero_one'
 models = [0,1,2,3,4,5,6,7,8]#[0,1,2,3] or  [0,1,4]
 
-runs = ['run_0','run_1','run_2']
+runs = ['run_0','run_1','run_2']#['run_3']
 
 test,val,lambdas = multiple_runs_concatenation(path=path,runs=runs,models=models,metric=metric)
 
@@ -36,7 +36,9 @@ val_means = np.mean(val,axis=0)
 test_std = np.std(test,axis=0)
 val_std = np.std(val,axis=0)
 
-
+threshold = 1e-2
+test_means,val_means,tmp = keep_last_elements(test_means,val_means,lambdas,threshold=threshold)
+test_std,val_std,lambdas = keep_last_elements(test_std,val_std,lambdas,threshold=threshold)
 
 
 # Figure 1
@@ -44,10 +46,11 @@ plt.rc('text', usetex=True)
 plt.rc('font', family='serif')
 
 
-size_font_title = 20
-size_font_legend = 15
-size_font_axis = 20
+size_font_title = 15
+size_font_legend = 13.5
+size_font_axis = 15
 tick_size = 10
+border_linewidth = 1.5
 
 fig1, ax1 = plt.subplots(figsize=(3,3))
 plt.xlabel('$\lambda$', fontsize=size_font_axis)
@@ -78,11 +81,12 @@ patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{test}}
 patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{validation}}$',
                       markerfacecolor=colors[2], markersize=15))
 
-plt.legend(loc=1, handles=patches, fontsize=size_font_legend)
+#plt.legend(loc=1, handles=patches, fontsize=size_font_legend)
 
 
 # Figure formating
 plt.grid(linestyle=':', color='k')
+[i.set_linewidth(border_linewidth) for i in ax1.spines.values()]
 plt.tight_layout()
 ax1.set_xscale('log')
 #ax1.set_yscale('log')
