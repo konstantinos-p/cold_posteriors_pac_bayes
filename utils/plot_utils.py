@@ -334,5 +334,70 @@ def plot_test_val(ax1,xlabel,ylabel,lambdas,test_means,val_means,test,title,lege
     #ax1.tick_params(axis='y', colors=cmap(0))
     return
 
+def plot_ECE_zero_one(ax1,xlabel,ylabel,test_means1,test_means2,title,legend,size_font_axis,
+                size_font_title,size_font_legend,border_linewidth,tick_size,vertline=True):
+    # Figure 1
+    if xlabel != None:
+        ax1.set_xlabel(xlabel, fontsize=size_font_axis)
+    if ylabel != None:
+        ax1.set_ylabel(ylabel, fontsize=size_font_title)
 
 
+    cmap = plt.colormaps["plasma"]
+
+    a = is_pareto_efficient(np.hstack([np.reshape(test_means1,(-1,1)),np.reshape(test_means2,(-1,1))]))
+    test_means1 = test_means1[a]
+    test_means2 = test_means2[a]
+
+    ax1.scatter(test_means1, test_means2, s=165, c='violet',marker='*')
+
+    if legend == True:
+        patches = []
+        patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{test}}$',
+                              markerfacecolor=cmap(0), markersize=15))
+        patches.append(Line2D([0], [0], marker='s', color='w', label='$Z_{\mathrm{validation}}$',
+                              markerfacecolor=cmap(0.5), markersize=15))
+
+        ax1.legend(loc=1, handles=patches, fontsize=size_font_legend)
+
+    if title != None:
+        ax1.set_title(title, fontsize=size_font_title)
+
+    # Figure formating
+    ax1.grid(linestyle=':', color='grey', axis='y')
+    [i.set_linewidth(border_linewidth) for i in ax1.spines.values()]
+    plt.tight_layout()
+    #ax1.set_xscale('log')
+
+    ax1.tick_params(axis='both', which='major', labelsize=tick_size)
+
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+    ax1.spines['left'].set_visible(False)
+    #ax1.tick_params(axis='y', colors=cmap(0))
+    return
+
+def is_pareto_efficient(costs, return_mask = True):
+    """
+    Find the pareto-efficient points
+    :param costs: An (n_points, n_costs) array
+    :param return_mask: True to return a mask
+    :return: An array of indices of pareto-efficient points.
+        If return_mask is True, this will be an (n_points, ) boolean array
+        Otherwise it will be a (n_efficient_points, ) integer array of indices.
+    """
+    is_efficient = np.arange(costs.shape[0])
+    n_points = costs.shape[0]
+    next_point_index = 0  # Next index in the is_efficient array to search for
+    while next_point_index<len(costs):
+        nondominated_point_mask = np.any(costs<costs[next_point_index], axis=1)
+        nondominated_point_mask[next_point_index] = True
+        is_efficient = is_efficient[nondominated_point_mask]  # Remove dominated points
+        costs = costs[nondominated_point_mask]
+        next_point_index = np.sum(nondominated_point_mask[:next_point_index])+1
+    if return_mask:
+        is_efficient_mask = np.zeros(n_points, dtype = bool)
+        is_efficient_mask[is_efficient] = True
+        return is_efficient_mask
+    else:
+        return is_efficient
