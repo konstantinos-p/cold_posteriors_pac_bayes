@@ -111,4 +111,6 @@ plt.text(1,4,r'$\frac{1}{\sigma^2_{\hat{\rho}}(\lambda) }=\frac{\lambda h}{d}+\f
 plt.tight_layout()
 plt.show()
 
+#asdasd
+
 end =1
