@@ -2,13 +2,229 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b481d24e-fd88-4fe1-840c-09e0a307ac5e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/ECE_vs_zero_one.py" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/ECE_vs_zero_one.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/plot_utils.py" afterPath="$PROJECT_DIR$/utils/plot_utils.py" />
+      <change afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/validation_zero_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cold-warm-posteriors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cold-warm-posteriors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/test_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/test_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/train_cifar10.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/train_cifar10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/test_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/test_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/train_cifar100.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/train_cifar100.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/MNIST/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/MNIST/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/fit_laplace_cifar10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_laplace_cifar10.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_laplace_cifar10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/train_cifar10.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/train_cifar10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/fit_laplace_cifar100.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_laplace_cifar100.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_laplace_cifar100.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/train_cifar100.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/train_cifar100.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/estimate_bounds_MNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/estimate_bounds_MNIST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/estimate_catoni_bounds_fashionmnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/estimate_catoni_bounds_fashionmnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/fit_laplace_fashionmnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/fit_laplace_fashionmnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_laplace_fashionmnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_laplace_fashionmnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/train_fashionmnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/train_fashionmnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/plot_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/plot_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/fit_laplace_svhn.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/fit_laplace_svhn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_laplace_svhn.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_laplace_svhn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/train_svhn.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/train_svhn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/test_la.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/test_la.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/train_MNIST.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/train_MNIST.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/abalone/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/abalone/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/diamonds/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/diamonds/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/estimate_bounds_abalone.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/estimate_bounds_abalone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/estimate_bounds_diamonds.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/estimate_bounds_diamonds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/estimate_bounds_kc_house.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/estimate_bounds_kc_house.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/kc_house/results/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/kc_house/results/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/train_abalone.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/train_abalone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/train_diamonds.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/train_diamonds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/train_kc_house.py" beforeDir="false" afterPath="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/regression_experiments/train_kc_house.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/abalone/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/abalone/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/abalone/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/abalone/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/abalone/true.csv" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/abalone/true.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/abalone/validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/abalone/validation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/abalone_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/abalone_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/laplace_extension.py" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/laplace_extension.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/model/model_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/model/model_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/model/state_dict.pt" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/model/state_dict.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/test_laplace_redux.py" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/test_laplace_redux.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laplace_package_extensions/train_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/laplace_package_extensions/train_neural_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/classification/plot_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/classification/plot_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/approximate_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/approximate_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/mixed_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/mixed_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/nll_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/nll_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/original_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/abalone/original_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/approximate_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/approximate_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/mixed_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/mixed_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/nll_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/nll_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/original_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/diamonds/original_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/approximate_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/approximate_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/mixed_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/mixed_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/nll_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/nll_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/original_bounds_temperature_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/img/kc_house/original_bounds_temperature_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/plot_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/plot_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/plot_regression_one_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/regression/plot_regression_one_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/utils_plot_detailed.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/detailed_experiments_appendix/utils_plot_detailed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/test_validation_sets/cifar100_test-val.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/test_validation_sets/cifar100_test-val.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/test_validation_sets/cifar10_test-val.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/test_validation_sets/cifar10_test-val.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/ECE_vs_zero_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/ECE_vs_zero_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_and_validation_zero_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_and_validation_zero_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/cifar100_catoni_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/cifar100_catoni_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/cifar10_catoni_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/cifar10_catoni_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/fashionmnist_catoni_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/fashionmnist_catoni_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/svhn_catoni_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds/svhn_catoni_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/cifar100_test-val.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/cifar100_test-val.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/cifar10_test-val.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/cifar10_test-val.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/fashionmnist_test-val.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/fashionmnist_test-val.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/svhn_test-val.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets/svhn_test-val.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/validation_ECE.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/validation_ECE.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/validation_nll.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/validation_nll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_abalone_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_abalone_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_abalone_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_abalone_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_diamonds_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_diamonds_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_diamonds_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_diamonds_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_kc_house_bounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_kc_house_bounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_kc_house_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_kc_house_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_ece.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_ece.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_nll.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_nll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_original.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_original.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_zero_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors/experiments_mnist_zero_one.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/abalone_bound_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/abalone_bound_and_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/diamonds_bound_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/diamonds_bound_and_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/kc_house_bound_and_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/kc_house_bound_and_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/correlation_bound_risk/correlation_bound_risk_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/correlation_bound_risk/correlation_bound_risk_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/correlation_bound_risk/correlation_bound_risk_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/correlation_bound_risk/correlation_bound_risk_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/outline/outline_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/outline/outline_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_abalone.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_abalone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_diamonds.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_diamonds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_kc_house.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_kc_house.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/introduction/regression_plots/introduction_plot_mnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/legend_patches_for_inline_latex.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/legend_patches_for_inline_latex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_approximate.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_approximate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_approximate_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_approximate_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_mixed.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_mixed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_mixed_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_mixed_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_original.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_original.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_original_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/abalone/abalone_original_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/all_ones_approximate_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/all_ones_approximate_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_approximate.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_approximate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_approximate_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_approximate_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_mixed.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_mixed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_mixed_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_mixed_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_original.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_original.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_original_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/diamonds/diamonds_original_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_approximate.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_approximate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_approximate_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_approximate_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_mixed.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_mixed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_mixed_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_mixed_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_original.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_original.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_original_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/kc_house/kc_house_original_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_mixed.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_mixed.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_mixed_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_mixed_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_original.png" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_original.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_original_bound.py" beforeDir="false" afterPath="$PROJECT_DIR$/plots_for_paper/theory/mnist/mnist_original_bound.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_distance_to_init_effect.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_distance_to_init_effect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_hessian_effect.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_hessian_effect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_prior_effect.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_prior_effect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_randomized_effects.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/plot_randomized_effects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/alquier_bound_variable_effect_plots/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/cifar10/cifar10_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/cifar10/cifar10_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/cifar10/dataset/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/cifar10/dataset/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/cifar10/test_cifar10_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/cifar10/test_cifar10_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/cifar100/cifar100_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/cifar100/cifar100_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/cifar100/dataset/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/cifar100/dataset/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/cifar100/test_cifar100_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/cifar100/test_cifar100_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/dataset/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/dataset/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/fashionmnist_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/fashionmnist_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/test_fashionmnist_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/fashionmnist/test_fashionmnist_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/mnist/dataset/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/mnist/dataset/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/mnist/download_mnist_and_emnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/mnist/download_mnist_and_emnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/mnist/mnist_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/mnist/mnist_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/mnist/test_mnist_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/mnist/test_mnist_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/svhn/dataset/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/svhn/dataset/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/svhn/svhn_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/svhn/svhn_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/classification_datasets/svhn/test_svhn_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/classification_datasets/svhn/test_svhn_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_classification/model_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_classification/model_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_classification/state_dict.pt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_classification/state_dict.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_regression/model_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_regression/model_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_regression/state_dict.pt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/model_regression/state_dict.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/test_laplace_redux_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/test_laplace_redux_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/test_laplace_redux_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/test_laplace_redux_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/train_neural_network_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/train_neural_network_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/laplace_redux_tests/train_neural_network_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/laplace_redux_tests/train_neural_network_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/true.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/true.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/dataset/validation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/preprocess_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/preprocess_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/raw/abalone.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/raw/abalone.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/test_simple_nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/test_simple_nn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/test_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/abalone_dataset/test_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/true.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/true.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/dataset/validation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/preprocess_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/preprocess_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/raw/diamonds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/raw/diamonds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/test_simple_nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/test_simple_nn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/test_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/diamonds_dataset/test_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/train.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/true.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/true.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/validation.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/dataset/validation.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/preprocess_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/preprocess_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/raw/kc_house_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/raw/kc_house_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/test_simple_nn.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/test_simple_nn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/test_torch_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/kc_house_dataset/test_torch_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/regression_datasets/regression_torch_datasets.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/regression_datasets/regression_torch_datasets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_config/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server_config/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server_config/server_env.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server_config/server_env.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/bound_evaluation_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/bound_evaluation_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/bound_evaluation_utils_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/bound_evaluation_utils_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/laplace_evaluation_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/laplace_evaluation_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/model_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/model_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/plot_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plot_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/results/classification/results.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/results/regression/bound_log.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/results/regression/results.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/test_laplace_evaluation_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test_laplace_evaluation_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/test_laplace_evaluation_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test_laplace_evaluation_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/test_plot_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test_plot_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/test_plot_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test_plot_regression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/wide_resnet_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/wide_resnet_utils.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,24 +232,6 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
-  <component name="FavoritesManager">
-    <favorites_list name="cold-warm-posteriors" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="plot_utils.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils/plot_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="351" column="58" lean-forward="false" selection-start-line="351" selection-start-column="58" selection-end-line="351" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,13 +242,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>optimize_prior_precision_base</find>
-      <find>self.temperature</find>
-      <find>_H_factor</find>
-      <find>isotropic</find>
-      <find>backend</find>
-      <find>BackPackGGN</find>
-      <find>n_data</find>
       <find>_curv_closure</find>
       <find>H_facs</find>
       <find>bmm</find>
@@ -74,6 +265,13 @@
       <find>nlls</find>
       <find>colors</find>
       <find>plot_catoni</find>
+      <find>pit</find>
+      <find>kon</find>
+      <find>stat</find>
+      <find>stati</find>
+      <find>arb</find>
+      <find>arbe</find>
+      <find>mistis</find>
     </findStrings>
     <replaceStrings>
       <replace>prior_variance</replace>
@@ -91,8 +289,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/train_cifar10.py" />
-        <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/train_cifar100.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/fashionmnist/train_fashionmnist.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/train_fashionmnist.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/train_svhn.py" />
@@ -138,18 +334,24 @@
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior/abalone_bound_and_test.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/legend_patch_for_inline_latex.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/legend_patches_for_inline_latex.py" />
-        <option value="$PROJECT_DIR$/utils/plot_utils.py" />
         <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/ECE_vs_zero_one.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_results.py" />
         <option value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" />
+        <option value="$PROJECT_DIR$/utils/plot_utils.py" />
+        <option value="$PROJECT_DIR$/utils/model_utils.py" />
+        <option value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/validation_zero_one.py" />
       </list>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="992" />
+    <option name="height" value="995" />
   </component>
+  <component name="ProjectId" id="2HXVWpkAWcxK4VJVyNf7Evar3SO" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -165,6 +367,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,16 +394,434 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plots_for_paper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plots_for_paper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plots_for_paper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="large_classification_datasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plots_for_paper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="large_classification_datasets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar100" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar100" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar100" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrong_results_validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrong_results_validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isotropic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wrong_results_validation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="isotropic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="run_0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold-warm-posteriors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cold_warm_posterior_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="augmented_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classification_experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cifar10" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/pkonstan/PycharmProjects/cold-warm-posteriors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data" />
+      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data" />
+      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets" />
+      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds" />
+      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plots_for_paper/experiments/regression/multiple_priors" />
       <recent name="$PROJECT_DIR$/plots_for_paper/experiments/regression" />
@@ -208,129 +829,8 @@
       <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/results/runs/isotropic/run_3" />
       <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data" />
-      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/test_validation_sets" />
-      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_bounds" />
-      <recent name="$PROJECT_DIR$/plots_for_paper/experiments/regression/single_prior" />
-      <recent name="$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar100/results" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.test_results (3)">
-    <configuration default="false" name="ECE_vs_zero_one" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/ECE_vs_zero_one.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_results" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar10/test_results.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_results (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_results.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_results (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test_results (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.outline_plot">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -350,112 +850,153 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="cold-warm-posteriors" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
+    <configuration name="outline_plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cold-warm-posteriors" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots_for_paper/introduction/outline" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/introduction/outline/outline_plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
+    <configuration name="test_results (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cold-warm-posteriors" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/test_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
+    <configuration name="test_results (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cold-warm-posteriors" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="cold-warm-posteriors" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
-      <method />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/svhn/test_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ECE_vs_zero_one" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test_results" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test_results (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test_results (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test_results (3)" />
+    <configuration name="test_results (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cold-warm-posteriors" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/test_results.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="validation_zero_one" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cold-warm-posteriors" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/validation_zero_one.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.outline_plot" />
+      <item itemvalue="Python.test_results (1)" />
+      <item itemvalue="Python.test_results (2)" />
+      <item itemvalue="Python.test_results (3)" />
+      <item itemvalue="Python.validation_zero_one" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_results (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test_results (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test_results (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test_results" />
-        <item index="4" class="java.lang.String" itemvalue="Python.ECE_vs_zero_one" />
+      <list>
+        <item itemvalue="Python.outline_plot" />
+        <item itemvalue="Python.validation_zero_one" />
+        <item itemvalue="Python.test_results (3)" />
+        <item itemvalue="Python.test_results (2)" />
+        <item itemvalue="Python.test_results (1)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b481d24e-fd88-4fe1-840c-09e0a307ac5e" name="Default" comment="" />
@@ -463,6 +1004,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646658721874</updated>
+      <workItem from="1668431452144" duration="886000" />
+      <workItem from="1668432516557" duration="563000" />
+      <workItem from="1668481967727" duration="1098000" />
     </task>
     <servers />
   </component>
@@ -476,7 +1020,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="992" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="995" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30015796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -488,7 +1032,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32265446" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43671608" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -517,8 +1061,19 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3561644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,7 +1488,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/plots_for_paper/introduction/outline/outline_plot.py</url>
-          <line>112</line>
+          <line>113</line>
           <option name="timeStamp" value="631" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -981,10 +1536,12 @@
           <line>8</line>
           <option name="timeStamp" value="661" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/validation_zero_one.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="662" />
+        </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -992,109 +1549,12 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="662" />
     </breakpoint-manager>
-    <watches-manager />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cold_warm_posteriors$outline_plot.coverage" NAME="outline_plot Coverage Results" MODIFIED="1668482530611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/plots_for_paper/introduction/outline" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/runs/isotropic/run_3/results_5.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/runs/isotropic/run_3/results_2.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/runs/isotropic/run_3/results_1.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/runs/isotropic/run_3/results_0.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/cifar100/results/runs/isotropic/run_3/hyperparameters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/hyperparameters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_0.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_1.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_2.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_3.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_4.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_5.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_6.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_7.pkl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/standard_data/classification_experiments/fashionmnist/results/runs/isotropic/run_3/results_8.pkl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1229,13 +1689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/model_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/catoni_and_validation_zero_one.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1290,16 +1743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/validation_nll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4515">
-          <caret line="301" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plots_for_paper/legend_patches_for_inline_latex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -1325,7 +1768,7 @@
         <state relative-caret-position="816">
           <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1335,7 +1778,7 @@
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1380,11 +1823,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/bound_evaluation_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="373" column="26" lean-forward="false" selection-start-line="373" selection-start-column="26" selection-end-line="373" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/laplace_evaluation_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="90" column="20" lean-forward="false" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/multiple_standard_data_experiments_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3495">
+          <caret line="233" column="8" lean-forward="false" selection-start-line="233" selection-start-column="7" selection-end-line="233" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/plot_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="351" column="58" lean-forward="false" selection-start-line="351" selection-start-column="58" selection-end-line="351" selection-end-column="58" />
+        <state relative-caret-position="206">
+          <caret line="342" column="35" lean-forward="false" selection-start-line="342" selection-start-column="35" selection-end-line="342" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/model_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="137" column="20" lean-forward="false" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/test_laplace_evaluation_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/test_laplace_evaluation_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/test_plot_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#81#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/test_plot_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/wide_resnet_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplace_package_extensions/laplace_extension.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="79" lean-forward="false" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server_config/server_env.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laplace_package_extensions/baselaplace_extension.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/standard_data/validation_nll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cold_warm_posterior_experiments/augmented_data/classification_experiments/cifar10/results/runs/wrong_results_validation/isotropic/run_0/hyperparameters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plots_for_paper/experiments/large_classification_datasets/augmented_data/validation_zero_one.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

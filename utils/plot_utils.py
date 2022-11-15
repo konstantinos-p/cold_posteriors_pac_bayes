@@ -10,13 +10,9 @@ def common_matplotlib_plot(results,exclude=[],transform = None,x_axis='$x$',y_ax
     Plot Figure
     '''
 
-
-
-
     # Figure 1
     plt.rc('text', usetex=True)
     plt.rc('font', family='serif')
-    #plt.rcParams['text.latex.preamble'] = [r"\usepackage{amsmath}"]
 
     size_font_title = 20
     size_font_legend = 15
@@ -26,10 +22,6 @@ def common_matplotlib_plot(results,exclude=[],transform = None,x_axis='$x$',y_ax
     fig1, ax1 = plt.subplots(figsize=(4, 4))
     plt.xlabel(x_axis, fontsize=size_font_axis)
     plt.ylabel(y_axis, fontsize=size_font_axis)
-
-    linewidth_m = 7
-    smoothness = 0.1
-    area = (8 * 0.7) ** 2  # 0 to 15 point radii
 
     colors = ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33']
 
@@ -290,7 +282,9 @@ def plot_catoni(ax,xlabel,lambdas,test_means,bound_means,test,title,legend,size_
 
 def plot_test_val(ax1,xlabel,ylabel,lambdas,test_means,val_means,test,title,legend,size_font_axis,
                 size_font_title,size_font_legend,border_linewidth,tick_size,vertline=True):
-    # Figure 1
+    '''
+    Basic plot of a chosen metric for the test set and the validation set.
+    '''
     if xlabel != None:
         ax1.set_xlabel(xlabel, fontsize=size_font_axis)
     if ylabel != None:
@@ -331,12 +325,13 @@ def plot_test_val(ax1,xlabel,ylabel,lambdas,test_means,val_means,test,title,lege
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
     ax1.spines['left'].set_visible(False)
-    #ax1.tick_params(axis='y', colors=cmap(0))
     return
 
 def plot_ECE_zero_one(ax1,xlabel,ylabel,test_means1,test_means2,title,legend,size_font_axis,
                 size_font_title,size_font_legend,border_linewidth,tick_size,vertline=True):
-    # Figure 1
+    '''
+    Basic plot of a chosen metric vs another metric for the test set and the validation set.
+    '''
     if xlabel != None:
         ax1.set_xlabel(xlabel, fontsize=size_font_axis)
     if ylabel != None:
@@ -367,14 +362,12 @@ def plot_ECE_zero_one(ax1,xlabel,ylabel,test_means1,test_means2,title,legend,siz
     ax1.grid(linestyle=':', color='grey', axis='y')
     [i.set_linewidth(border_linewidth) for i in ax1.spines.values()]
     plt.tight_layout()
-    #ax1.set_xscale('log')
 
     ax1.tick_params(axis='both', which='major', labelsize=tick_size)
 
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
     ax1.spines['left'].set_visible(False)
-    #ax1.tick_params(axis='y', colors=cmap(0))
     return
 
 def is_pareto_efficient(costs, return_mask = True):

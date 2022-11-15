@@ -4,7 +4,7 @@ from torch.nn.utils import parameters_to_vector
 from torch.optim.lr_scheduler import MultiplicativeLR
 
 '''
-In this small script we define the neural network class used in the Laplace-Redux tests as
+In this small script we define the neural network classes used in the Laplace-Redux tests as
 well as some helper functions.
 '''
 

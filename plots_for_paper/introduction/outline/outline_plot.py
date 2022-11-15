@@ -109,5 +109,6 @@ plt.text(1,4,r'$\frac{1}{\sigma^2_{\hat{\rho}}(\lambda) }=\frac{\lambda h}{d}+\f
          size=size_font_title,bbox=dict(boxstyle="round",ec=(1., 0.5, 0.5),fc=(1., 0.8, 0.8),
                    ))
 plt.tight_layout()
+plt.show()
 
 end =1
